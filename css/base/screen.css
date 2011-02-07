@@ -1,0 +1,593 @@
+body {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	background: #fff;
+	font-size: 62.5%;
+}
+
+#page-container {
+	
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	ACCESSIBILITY 
+----------------------------------------------------------------------------------------------------------*/
+.access {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow:hidden;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	BRAND BAR REGION 
+----------------------------------------------------------------------------------------------------------*/
+#region-brandbar-container {
+	
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	HEADER 
+----------------------------------------------------------------------------------------------------------*/
+#region-header-container {
+	
+}
+
+#region-header-left-belltower {
+	width: 70px;
+	height: 118px;
+	overflow: hidden;
+}
+
+#region-header-left {
+	background: url(../../images/base/ncsu-header-tile-left.png) repeat-x
+		left bottom;
+	position: relative;
+	height: 88px;
+	top: 30px;
+}
+
+#region-header-right {
+	background: url(../../images/base/ncsu-header-tile-right.png) repeat-x
+		left bottom;
+	height: 88px;
+	position: relative;
+	top: 30px;
+	position: relative;
+}
+
+#head {
+	border-bottom: 2px solid #fff;
+	position: relative;
+	width: 100%;
+	min-height: 116px;
+	display: inline-block;
+}
+
+/* easy clearing */
+#head:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/*\*/
+#head {
+	display: block;
+}
+
+/* end easy clearing */
+#head p.noscript {
+	clear: both;
+	z-index: 99;
+	position: relative;
+	margin-left: 340px;
+}
+
+/*belltower logo*/
+.bellTowerLogo {
+	z-index: 95;
+	width: 70px;
+	height: 118px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: url(../../images/base/ncsu-belltower.png) no-repeat;
+}
+
+#siteTitleImage {
+	margin: 25px 0 0 15px;
+}
+#head-forms {
+	position: relative;
+	top: 10px;
+	left: 35px;
+}
+
+#head-forms .quicklinks-button {
+	position: relative;
+	top: 7px;
+	left: 4px;
+}
+
+#header-site-search-without-quicklinks {
+	position: relative;
+	top: 20px;
+	left: 35px;
+}
+
+#header-site-search-with-quicklinks .ncstate-search-button,#header-site-search-without-quicklinks .ncstate-search-button {
+	position: relative;
+	top: 12px;
+}
+
+/* Search box and quicklinks menu styles */
+#region-header-right .form-text {
+	position: relative;
+	top: 5px;
+	width: 180px;
+	font-size: 10px;
+	width: 180px;
+}
+
+#region-header-right select {
+	width: 185px;
+	font-size: 10px;
+}
+/* hide the label and h2 tag for the search box */
+#region-header-right label, #region-header-right h2 {
+	display: none;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+	CONTENT AREA CONTAINER (EVERYTHING UNDERNEATH THE HEADER AND ABOVE THE FOOTER)
+----------------------------------------------------------------------------------------------------------*/
+.content-area-container {
+	
+}
+
+#content-area {
+	
+}
+
+.content-area-background-with-left-column {
+	background: url(../../images/base/content_2col_bg.png) repeat-y;
+}
+
+.content-area-background-without-left-column {
+	background-color: #FFF;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	MAIN/CENTER CONTENT (THE CENTER COLUMN IN A 3-COL LAYOUT, OR THE LEFT 2 COLUMNS IN A 2-COL LAYOUT)
+----------------------------------------------------------------------------------------------------------*/
+#main-content {
+	padding: 0 12px 0 12px;
+	line-height: 1.55em;
+}
+
+#main-content #page-title {
+	margin: 5px 0 14px 0;
+	padding: 0 0 13px 0;
+	border-bottom: 1px solid #CCC;
+}
+
+#main-content #page-title h1 {
+	font-size: 2em;
+	line-height: 1.2em;
+	font-weight: normal;
+	color: #CC0000; /* NC State Red */
+}
+
+#main-content a,#main-content a:visited {
+	color: #CC0000;
+	text-decoration: none;
+}
+
+#main-content a:hover {
+	text-decoration: underline;
+	color: #9B1405;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	MAIN/CENTER CONTENT LINKS (UNDERNEATH FOR COMMENTS, TAXONOMY ETC
+----------------------------------------------------------------------------------------------------------*/
+#main-content .links {
+	width: 100%;
+	text-align: right;
+	padding: 10px 0 0 0;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	MAIN/CENTER CONTENT COMMENTS REGION
+----------------------------------------------------------------------------------------------------------*/
+.submitted {
+	margin: 10px 0 5px 0;
+	padding: 0;
+}
+
+#comments {
+	border-top: 1px solid #CCC;
+	padding: 5px 0 5px 0;
+}
+
+.comment-wrapper .comment {
+	margin: 10px 0 10px 0;
+	border-bottom: 1px solid #DDD;
+}
+
+.comment-wrapper .comment .submitted {
+	color: #AAA;
+}
+
+.comment-wrapper .comment .content {
+	padding: 5px 0 0 0;
+}
+
+.comment-wrapper .comment .links {
+	float: right;
+	width: 100%;
+	text-align: right;
+	padding: 5px 0 5px 0;
+}
+
+#comment-form .form-submit {
+	background: #CC0000;
+	color: #FFF;
+	font-size: 1.2em;
+	margin: 0 5px 0 0;
+}
+
+#comment-form .form-submit:hover {
+	background: #FFF;
+	color: #CC0000;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	LEFT REGION LAYOUT 
+----------------------------------------------------------------------------------------------------------*/
+#region-left-menu-area-container {
+	line-height: 1.55em;
+}
+
+#region-left-menu-area-container ul.menu li {
+	margin: 0;
+	padding: 0;
+}
+
+#region-left-menu {
+	overflow: hidden;
+	background-color: #FFF;
+	color: #FFF;
+	/* min-height: 290px; */
+}
+
+#left-above-menu {
+	margin: 0 0 4px 0;
+	color: #000;
+}
+
+#left-main-menu {
+	background-color: #373737;
+}
+
+#left-sub-menu {
+	margin: 4px 0 0 0;
+	background-color: #666666;
+}
+
+#left-below-menu {
+	margin: 4px 0 4px 0;
+	color: #000;
+}
+
+#left-end-separator {
+	margin: 4px 0 4px 0;
+	background-color: #A61104;
+	height: 12px;
+	background-color: #A61104;
+}
+
+#left-above-menu-content,#left-below-menu-content {
+	padding: 5px;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	LEFT MENU HEADER LIST/LINK STYLES 
+----------------------------------------------------------------------------------------------------------*/
+#region-left-menu .block ul {
+	padding: 0;
+	margin: 0;
+}
+
+#left-main-menu h2 {
+	display: block;
+	line-height: 1.3em;
+	padding: 10px 0 10px 20px;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: bold;
+	background-color: #171717;
+	background-image: url("../../images/base/bullet_nav_active.gif");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 10px 1.2em;
+}
+
+#left-main-menu .content .menu ul,#left-main-menu .content .menu li {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+#left-main-menu .content .menu li a {
+	font-size: 1.1em;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	background-color: #373737;
+	padding: 4px 10px 4px 20px;
+}
+
+#left-main-menu .content .menu li a:hover {
+	background-color: #4B4B4B;
+}
+
+/* first set of sub links underneath the main menu */
+#left-main-menu .content .menu li ul li a {
+	background-color: #515151;
+	padding: 5px 0 5px 30px;
+	background-image: url("../../images/base/bullet_nav_lvl3.gif");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 20px 0.7em;
+}
+
+/* second set of sub links underneath the main menu */
+#left-main-menu .content .menu li ul li ul li a {
+	background-color: #515151;
+	padding: 5px 0 5px 40px;
+	background-image: url("../../images/base/bullet_nav_lvl3.gif");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 30px 0.7em;
+}
+
+#left-main-menu .content .menu .last {
+	padding: 0 0 4px 0;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	LEFT SECONDARY (SUB) MENU HEADER LIST/LINK STYLES 
+----------------------------------------------------------------------------------------------------------*/
+#left-sub-menu h2 {
+	display: block;
+	line-height: 1.3em;
+	padding: 10px 0 10px 20px;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: bold;
+	background-color: #171717;
+	background-image: url("../../images/base/bullet_nav_active.gif");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 10px 1.2em;
+}
+
+#left-sub-menu .content .menu ul,#left-sub-menu .content .menu li {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+#left-sub-menu .content .menu li a,#left-sub-menu .content .menu li a:visited
+	{
+	display: block;
+	line-height: 1.3em;
+	padding: 3px 0 3px 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #FFF;
+	background-image: url("../../images/base/bullet_nav.gif");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 10px 0.7em;
+}
+
+#left-sub-menu .content .menu li a:hover {
+	background-color: #434343;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	RIGHT REGION LAYOUT
+----------------------------------------------------------------------------------------------------------*/
+#region-right-sidebar-container {
+	
+}
+
+#region-right-sidebar a, #region-right-sidebar a:visited {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#region-right-sidebar {
+	margin: 4px 0 0 0;
+	overflow: hidden;
+	background-color: #E5E3D6;
+}
+
+#right-above-sidebar,#right-center-sidebar,#right-below-sidebar {
+	margin: 5px;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	RIGHT REGION CONTENT STYLES
+----------------------------------------------------------------------------------------------------------*/
+#right-above-sidebar-content,#right-center-sidebar-content,#right-below-sidebar-content
+	{
+	margin: 0 10px 5px 0;
+	color: #FFF;
+}
+
+#right-above-sidebar-content .content,#right-center-sidebar-content .content,#right-below-sidebar-content .content
+	{
+	padding: 5px;
+}
+
+#right-above-sidebar-content .content p,#right-center-sidebar-content .content p,#right-below-sidebar-content .content p
+	{
+	line-height: 1.4em;
+}
+
+#right-above-sidebar-content h2,#right-center-sidebar-content h2,#right-below-sidebar-content h2
+	{
+	display: block;
+	line-height: 1.3em;
+	padding: 5px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.6em;
+	font-weight: normal;
+}
+
+#right-above-sidebar-content {
+	background-color: #C49C01;
+}
+
+#right-above-sidebar-content h2 {
+	background-color: #B68900;
+}
+
+#right-center-sidebar-content {
+	background-color: #000;
+}
+
+#right-center-sidebar-content h2 {
+	background-color: #434343;
+}
+
+#right-below-sidebar-content {
+	background-color: #6E839C;
+}
+
+#right-below-sidebar-content h2 {
+	background-color: #4C637F;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	CENTER AND RIGHT REGION CONTAINER (EVERYTHING TO THE RIGHT OF THE STATIC LEFT REGION
+----------------------------------------------------------------------------------------------------------*/
+#region-center-right-container {
+	background-color: #CC0000;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	BREADCRUMBS (NOT DISPLAYED UNLESS CUSTOM BREADCRUMBS MODULE IS INSTALLED, CONFIGURED & ENABLED
+----------------------------------------------------------------------------------------------------------*/
+#breadcrumb {
+	border: 1px solid #cfcdc8;
+	border-width: 1px 0;
+	padding: 4px 13px 2px 13px;
+	color: #5c5541;
+	margin: 4px 0 4px 3px;
+	line-height: 1.0em;
+}
+
+#breadcrumb a {
+	color: #c00;
+	text-decoration: none;
+}
+
+#breadcrumb a:hover {
+	text-decoration: underline;
+}
+
+#breadcrumb img {
+	display: inline;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	MAIN IMAGE (SLIDER OR STATIC) 
+----------------------------------------------------------------------------------------------------------*/
+#region-main-image {
+	height: 285px;
+	overflow: hidden;
+}
+
+#region-main-image img {
+	padding: 0 0 0 3px;
+}
+
+/*----------------------------------------------------------------------------------------------------------
+	FOOTER CONTAINER
+----------------------------------------------------------------------------------------------------------*/
+#region-footer-container {
+	font-family: Arial, Helvetica, sans-serif;
+	overflow: hidden;
+}
+
+#region-footer-container a, #region-footer-container a:visited {
+	color: #fff;
+}
+
+/* Hide the title of the block, if the user configures a non-default menu for the footer region */
+#region-footer-container .block-menu h2 {
+	display:none;
+}
+
+#footer-separator {
+	margin: 4px 0 4px 0;
+	background-color: #CC0000;
+	height: 6px;
+}
+
+#footer-horizontal-menu {
+	background-color: #CC0000;
+	height: 40px;
+	margin: 0 0 10px 0;
+}
+
+#footer-horizontal-menu ul {
+	display: inline-block;
+	padding: 15px 9px 10px;
+}
+
+#footer-horizontal-menu ul li {
+	float: left;
+	display: inline;
+	font-size: 1em;
+	text-transform: uppercase;
+	padding: 0 12px 0 11px;
+}
+
+#footer-horizontal-menu li.last {
+	
+}
+
+#footer-horizontal-menu ul li a {
+	color: #fff;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+#footer-horizontal-menu ul li a:hover {
+	text-decoration: underline;
+}
+
+#footer-logo {
+	height: 45px;
+	background: url(../../images/base/footaddy_bg.gif) no-repeat;
+}
+
+#footer-address-contact-info {
+	text-align: right;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	color: #CC0000;
+}
