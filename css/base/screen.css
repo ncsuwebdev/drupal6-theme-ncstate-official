@@ -478,6 +478,77 @@ body {
 }
 
 /*----------------------------------------------------------------------------------------------------------
+	RIGHT REGION MENU STYLES -- If a menu gets placed in the right-side-sidebar-container
+----------------------------------------------------------------------------------------------------------*/
+
+
+#region-right-sidebar-container ul.menu li,
+#region-right-sidebar-container .block-menu, 
+#region-right-sidebar-container .block-menu .content, 
+#region-right-sidebar-container .block-menu .content ul  {
+	padding: 0;
+	margin: 0;
+	background-color: #373737;
+}
+
+#region-right-sidebar-container .block-menu h2 {
+	display: block;
+	line-height: 1.3em;
+	padding: 10px 0 10px 20px;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: bold;
+	background-color: #171717;
+	background-image: url("../../images/base/bullet_nav_active.gif");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 10px 1.2em;
+}
+
+#region-right-sidebar-container .block-menu .content .menu ul,#region-right-sidebar-container .block-menu .content .menu li {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+#region-right-sidebar-container .block-menu .content .menu li a {
+	font-size: 1.1em;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	background-color: #373737;
+	padding: 4px 10px 4px 20px;
+}
+
+#region-right-sidebar-container .block-menu .content .menu li a:hover {
+	background-color: #4B4B4B;
+}
+
+/* first set of sub links underneath the main menu */
+#region-right-sidebar-container .block-menu .content .menu li ul li a {
+	background-color: #515151;
+	padding: 5px 0 5px 30px;
+	background-image: url("../../images/base/bullet_nav_lvl3.gif");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 20px 0.7em;
+}
+
+/* second set of sub links underneath the main menu */
+#region-right-sidebar-container .block-menu .content .menu li ul li ul li a {
+	background-color: #515151;
+	padding: 5px 0 5px 40px;
+	background-image: url("../../images/base/bullet_nav_lvl3.gif");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 30px 0.7em;
+}
+
+#region-right-sidebar-container .block-menu .content .menu .last {
+	padding: 0 0 4px 0;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
 	CENTER AND RIGHT REGION CONTAINER (EVERYTHING TO THE RIGHT OF THE STATIC LEFT REGION
 ----------------------------------------------------------------------------------------------------------*/
 #region-center-right-container {
