@@ -1,14 +1,6 @@
 /* `Basic HTML
 ----------------------------------------------------------------------------------------------------*/
 
-body {
-	font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
-}
-
-a:focus {
-	outline: 1px dotted;
-}
-
 hr {
 	border: 0 #ccc solid;
 	border-top-width: 1px;
@@ -16,62 +8,40 @@ hr {
 	height: 0;
 }
 
-/* `Headings
-----------------------------------------------------------------------------------------------------*/
-
-h1 {
-	font-size: 25px;
-}
-
-h2 {
-	font-size: 23px;
-}
-
-h3 {
-	font-size: 21px;
-}
-
-h4 {
-	font-size: 19px;
-}
-
-h5 {
-	font-size: 17px;
-}
-
-h6 {
-	font-size: 15px;
-}
-
-/* `Spacing
-----------------------------------------------------------------------------------------------------*/
-
-ol {
-	list-style: decimal;
-}
-
 ul {
 	list-style: disc;
 }
-
-li {
-	margin-left: 30px;
+ul ul {
+	list-style: circle;
 }
-
-p,
-dl,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
+ul ul ul {
+	list-style: square;
+}
+ol {
+	list-style: decimal;
+}
+ol ol {
+	list-style:upper-alpha;
+}
+ol ol ol {
+	list-style:lower-roman;
+}
+ol ol ol ol {
+	list-style:lower-alpha;
+}
 ul,
-pre,
-table,
-address,
-fieldset {
-	margin-bottom: 20px;
+ol {
+	margin: 0 0 0 3em;
+}
+ul ul,
+ol ol {
+	margin: 0 0 0 3.2em;
+}
+ul ul ul,
+ol ol ol {
+	margin: 0 0 0 3.4em;
+}
+ul ul ul ul,
+ol ol ol ol {
+	margin: 0 0 0 3.6em;
 }

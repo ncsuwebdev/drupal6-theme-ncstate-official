@@ -11,6 +11,7 @@ engine = phptemplate
 ;960 Grid System Styles, from http://www.gridsystemgenerator.com
 stylesheets[all][]   = css/960/reset.css
 stylesheets[all][]   = css/960/base.css
+stylesheets[all][]   = css/960/text.css
 stylesheets[all][]   = css/960/900_90_0_0.css
 
 ; styles provided by NC State University Communications Office
