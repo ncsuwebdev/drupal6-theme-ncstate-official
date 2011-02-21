@@ -690,6 +690,7 @@ body {
 #footer-horizontal-menu ul {
 	display: inline-block;
 	padding: 15px 9px 10px;
+	margin: 0;
 }
 
 #footer-horizontal-menu ul li {
