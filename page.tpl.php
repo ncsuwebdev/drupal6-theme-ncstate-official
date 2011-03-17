@@ -49,7 +49,7 @@
 					<?php endif; ?>
 					<div id="region-header-left" class="grid_<?php echo $page['region-widths']['region-header-left-width']; ?>">
 				        <a href="<?php echo base_path(); ?>" title="Return to the homepage of this website">
-				        	<img alt="Site Title: <?php echo theme_get_setting('bold_title_text') . ' ' . theme_get_setting('regular_title_text'); ?>" title="Site Title: <?php echo theme_get_setting('bold_title_text') . ' ' . theme_get_setting('regular_title_text'); ?>" aria-label="Site Title: <?php echo theme_get_setting('bold_title_text') . ' ' . theme_get_setting('regular_title_text'); ?>" id="siteTitleImage" src="<?php echo base_path().path_to_theme(); ?>/font/create-header.php?boldText=<?php echo theme_get_setting('bold_title_text'); ?>&regularText=<?php echo theme_get_setting('regular_title_text') ?>&width=<?php echo $page['region-widths']['region-header-title-width'] . 'px'; ?>">
+				        	<img alt="Site Title: <?php echo theme_get_setting('bold_title_text') . ' ' . theme_get_setting('regular_title_text'); ?>" title="Site Title: <?php echo theme_get_setting('bold_title_text') . ' ' . theme_get_setting('regular_title_text'); ?>" aria-label="Site Title: <?php echo theme_get_setting('bold_title_text') . ' ' . theme_get_setting('regular_title_text'); ?>" id="siteTitleImage" src="<?php echo base_path().path_to_theme(); ?>/images/base/site_title_image.png">
 				        </a>
 				    </div>
 				    <?php if ($page['region-widths']['show-right-header-region']): ?>
@@ -140,9 +140,14 @@
 								</div>
 							<?php endif; ?>
 							<div id="region-center-content-container" class="container_<?php echo $page['region-widths']['center-region-width']; ?>">
-								<div id="main-content-wrapper" class="grid_<?php echo $page['region-widths']['center-region-width']; ?>">	
-									<div id="main-content" aria-label="Main Content Area">	
-										<a class="access" name="main-content"></a>
+								<a class="access" name="main-content"></a>
+                                <div id="main-content-wrapper" class="grid_<?php echo $page['region-widths']['center-region-width']; ?>">	
+									<?php if($main_above_content): ?>
+                                        <div id="above-main-content" aria-label="Above Main Content Area">  
+	                                    	<?php print($main_above_content); ?>
+                                        </div>
+                                	<?php endif; ?>
+                                    <div id="main-content" aria-label="Main Content Area">
 									    <?php if ($mission): print '<div id="mission">'. $mission .'</div>'; endif; ?>
 									    <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
 									    <?php if ($title): print '<div id="page-title"><h1'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h1></div>'; endif; ?>
@@ -155,6 +160,11 @@
 										</div>
 										<?php print $feed_icons ?>
 									</div>
+                                    <?php if($main_below_content): ?>
+	                                    <div id="below-main-content" aria-label="Below Main Content Area">  
+	                                        <?php print($main_below_content); ?>
+		                                </div>
+									<?php endif; ?>
 								</div>
 							</div>
 							<?php if($page['region-widths']['show-right-region']): ?>
