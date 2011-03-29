@@ -765,3 +765,11 @@ table.sticky-enabled td, table.views-table td {
 }
 
 
+/* div for links at end of post: vocab - terms etc */
+div.meta {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: solid 1px #CCC;
+}
+
+
