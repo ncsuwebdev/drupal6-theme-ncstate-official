@@ -27,19 +27,21 @@ function MM_jumpMenuGo(selName,targ,restore){ //v3.0
 jQuery(document).ready(function() {
 	
 	if (jQuery('#edit-search-block-form--2')) {
-		var search = jQuery('#edit-search-block-form--2');
+		var search = jQuery('#edit-search-block-form-1');
 	
+		search.val('Search this site...');
+		
 		search.focus(function(){
-	        if (search.val() == 'Search this site') {
+	        if (search.val() == 'Search this site...') {
 	            search.val("");
 	        }
 	    }).blur(function(){
 	        if (jQuery.trim(search.val()) == "") {
-	            search.val('Search this site');
+	            search.val('Search this site...');
 	        }
 	    });
 		
-		search.val('Search this site');
+		
 		
 		var $searchButton = jQuery('.form-submit', jQuery('#region-header-container'));
 		
