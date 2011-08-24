@@ -31,16 +31,25 @@
 				</ul>
 		</div>
 	<!-- end accessibility links -->
-	<div id="region-brandbar-container">
-		<a class="access" name="brand-bar">NC State Brand Bar</a>
-		<div id="region-brandbar" aria-label="NC State Brand Bar"><?php print $page['brand-bar-code'];?></div>
-		</div>
-		<!-- End brandbar region -->
+	<!-- show either the default red menu at the top of the header region, or the nbrandbar  -->
+	<?php if(theme_get_setting('select_brand_bar') != 0): ?>
+        <div id="region-brandbar-container">
+            <a class="access" name="brand-bar">NC State Brand Bar</a>
+            <div id="region-brandbar" aria-label="NC State Brand Bar"><?php print $page['brand-bar-code'];?></div>
+        </div>
+        <!-- End brandbar region -->
+    <?php endif; ?>
 		<div id="page-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
 			<!-- start header container region with site title, quicklinks, search box etc -->
 			<div id="region-header-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
 				<div id="head">
-		            <?php if(theme_get_setting('show_belltower')): ?>
+		            <?php if(theme_get_setting('select_brand_bar') == 0): ?>
+				        <div id="region-noBrandBarDefaultTopMenu-container">
+				            <a class="access" name="university-navigation-links">University Navigation Links</a>
+				            <div id="region-noBrandBarDefaultTopMenu" aria-label="University Navigation Links"><?php print $page['noBrandBarDefaultTopMenu'];?></div>
+				        </div>
+				    <?php endif; ?>
+    				<?php if(theme_get_setting('show_belltower')): ?>
 						<div id="region-header-left-belltower" class="grid_7">
 					        <a href="<?php echo base_path(); ?>" title="Return to the homepage of this website">
 					        	<div class="bellTowerLogo" title="Image of North Carolina State University Bell Tower"></div>

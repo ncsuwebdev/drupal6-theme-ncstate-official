@@ -26,7 +26,8 @@ function phptemplate_settings($saved_settings) {
     '#title' => 'Select Brand Bar (Utility Bar) to use at the top of the theme', 
     '#default_value' => $settings['select_brand_bar'],
 	'#options' => array(
-			1 => 'Red text on White',
+			0 => 'None - Use Default Top Menu',
+  			1 => 'Red text on White',
 	  		2 => 'Red text on White (centered)',
 	      	3 => 'White text on Red',  
 	      	4 => 'White text on Red (centered)',    

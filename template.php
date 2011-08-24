@@ -205,6 +205,36 @@ function phptemplate_preprocess_page(&$vars) {
 			break;
 	}
 	
+	// menu that sits on top of the red header region, if there is no brand bar displayed
+	
+	if(theme_get_setting('select_brand_bar') == 0) {
+		$vars['page']['noBrandBarDefaultTopMenu'] = '
+			<h2 title="North Carolina State University">North Carolina State University</h2>
+			<ul id="noBrandBarDefaultTopMenuNav">
+				<li>
+					<a href="http://www.ncsu.edu/directory/" title="Find People at North Carolina State University">Find People</a>
+				</li>
+				<li>
+					<a href="http://www.lib.ncsu.edu/" title="North Carolina State University Libraries">Libraries</a>
+				</li>
+				<li>
+					<a href="http://news.ncsu.edu/" title="Latest North Carolina State University News">News</a>
+				</li>
+				<li>
+					<a href="http://calendar.activedatax.com/ncstate/" title="North Carolina State University Events Calendar">Calendar</a>
+				</li>
+				<li>
+					<a href="http://mypack.ncsu.edu" title="North Carolina State University Portal">MyPack Portal</a>
+				</li>
+				<li>
+					<a href="giving/index.php" title="Giving to North Carolina State University">Giving</a>
+				</li>
+				<li class="last">
+					<a href="http://www.ncsu.edu/campus_map/" title="North Carolina State University Campus Map">Campus Map</a>
+				</li>
+			</ul>'; 
+	}
+	
 	// check for footer horizontal menu. If configured by user, display it. If not configured by user, display default menu.
 	if(!$vars['footer_menu']) {
 		$vars['footer_menu'] = '

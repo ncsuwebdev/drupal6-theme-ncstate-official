@@ -142,6 +142,56 @@ body {
     display: none;
 }
 
+/* RED HEADER REGION MENU - FOR WHEN THERE IS NO BRAND BAR */
+#region-noBrandBarDefaultTopMenu {
+    width: 830px;
+    height: 30px;
+    overflow: hidden;
+    padding: 6px 0 6px 0;
+    position: absolute;
+    top: 5px;
+    left: 90px;
+}
+
+#region-noBrandBarDefaultTopMenu h2 {
+  font-family: Arial;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #CC0000;
+  float: left;
+}
+#region-noBrandBarDefaultTopMenu a {
+    color: #CC0000;
+    text-decoration: none;
+}
+#region-noBrandBarDefaultTopMenu a:hover {
+    text-decoration: underline;
+}
+
+#region-noBrandBarDefaultTopMenu ul {
+    list-style-type:none;
+    float: left;
+    position: relative;
+    bottom: 3px;
+}
+#region-noBrandBarDefaultTopMenu li {
+    background-image: url(http://www.ncsu.edu/_assets/images/layout_assets/head_topnav_div.gif);
+    background-position:100% 50%;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    float: left;
+    display: block;
+    padding-bottom:2px;
+    padding-left:8px;
+    padding-right:9px;
+    padding-top:4px;
+}
+#region-noBrandBarDefaultTopMenu li.last {
+    background-image: none;
+}
+
+
+
 
 /*----------------------------------------------------------------------------------------------------------
     CONTENT AREA CONTAINER (EVERYTHING UNDERNEATH THE HEADER AND ABOVE THE FOOTER)
@@ -779,6 +829,17 @@ div.meta {
     padding-top: 10px;
     margin-top: 10px;
     border-top: solid 1px #CCC;
+}
+
+/* basic formatting for tables that appear in the main content area */
+#main-content .node table {
+    margin: 1em; 
+    border-collapse: collapse;
+}
+
+#main-content .node table td, #main-content .node table th { 
+    padding: 0.3em; 
+    border: 1px #ccc solid;
 }
 
 
