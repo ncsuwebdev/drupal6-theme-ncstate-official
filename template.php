@@ -209,7 +209,9 @@ function phptemplate_preprocess_page(&$vars) {
 	
 	if(theme_get_setting('select_brand_bar') == 0) {
 		$vars['page']['noBrandBarDefaultTopMenu'] = '
-			<h2 title="North Carolina State University">North Carolina State University</h2>
+			<h2 title="North Carolina State University">
+				<a href="http://www.ncsu.edu" title="North Carolina State University">North Carolina State University</a>
+			</h2>
 			<ul id="noBrandBarDefaultTopMenuNav">
 				<li>
 					<a href="http://www.ncsu.edu/directory/" title="Find People at North Carolina State University">Find People</a>

@@ -164,7 +164,7 @@ body {
     color: #CC0000;
     text-decoration: none;
 }
-#region-noBrandBarDefaultTopMenu a:hover {
+#region-noBrandBarDefaultTopMenu a:hover, #region-noBrandBarDefaultTopMenu a:focus, #region-noBrandBarDefaultTopMenu a:active {
     text-decoration: underline;
 }
 
@@ -249,7 +249,7 @@ body {
     text-decoration: none;
 }
 
-#main-content a:hover {
+#main-content a:hover, #main-content a:focus, #main-content a:active {
     text-decoration: underline;
     color: #9B1405;
 }
@@ -398,7 +398,7 @@ body {
     padding: 4px 10px 4px 20px;
 }
 
-#left-main-menu .content .menu li a:hover {
+#left-main-menu .content .menu li a:hover, #left-main-menu .content .menu li a:focus, #left-main-menu .content .menu li a:active {
     background-color: #4B4B4B;
 }
 
@@ -468,7 +468,7 @@ body {
     background-position: 10px 0.7em;
 }
 
-#left-sub-menu .content .menu li a:hover {
+#left-sub-menu .content .menu li a:hover,#left-sub-menu .content .menu li a:focus, #left-sub-menu .content .menu li a:active   {
     background-color: #434343;
 }
 
@@ -483,7 +483,7 @@ body {
     color: #fff;
     text-decoration: underline;
 }
-#region-right-sidebar a:hover {
+#region-right-sidebar a:hover, #region-right-sidebar a:focus, #region-right-sidebar a:active {
     text-decoration: none;
 }
 
@@ -653,13 +653,13 @@ body {
 }
 
 /* LIST ITEM HOVER COLORS */
-#region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:hover {
+#region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:active {
     background-color: #b68900;
 }
-#region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li a:hover {
+#region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li a:active {
     background-color: #434343;
 }
-#region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:hover {
+#region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:active {
     background-color:#4c637f;
 }
 
@@ -711,7 +711,7 @@ body {
     text-decoration: none;
 }
 
-#breadcrumb a:hover {
+#breadcrumb a:hover, #breadcrumb a:focus, #breadcrumb a:active {
     text-decoration: underline;
 }
 
@@ -784,7 +784,7 @@ body {
     white-space: nowrap;
 }
 
-#footer-horizontal-menu ul li a:hover {
+#footer-horizontal-menu ul li a:hover, #footer-horizontal-menu ul li a:focus, #footer-horizontal-menu ul li a:active {
     text-decoration: underline;
 }
 
