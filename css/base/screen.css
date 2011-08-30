@@ -692,7 +692,7 @@ body {
     CENTER AND RIGHT REGION CONTAINER (EVERYTHING TO THE RIGHT OF THE STATIC LEFT REGION
 ----------------------------------------------------------------------------------------------------------*/
 #region-center-right-container {
-    background-color: #CC0000;
+    /* background-color: #CC0000; */
 }
 
 /*----------------------------------------------------------------------------------------------------------
