@@ -19,16 +19,14 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
    * matches the $defaults in the theme-settings.php file.
    */
   $defaults = array(
-    	'select_brand_bar' 				=> 2,
+    	'select_brand_bar' 				=> 0,
     	'show_belltower' 				=> 1,
 		'bold_title_text'	      		=> 'MY',
 		'regular_title_text'      		=> 'DRUPAL WEBSITE',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
-		'copyright_information' 		=> '© 2010 Your Name.',
-		'select_brand_bar'				=> 2,
-		'show_belltower'				=> 1,
+		'copyright_information' 		=> '© 2011',
 		'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
   	);
 
@@ -130,7 +128,7 @@ function phptemplate_preprocess_page(&$vars) {
 		// set the quicklinks code here
 		$vars['page']['region-widths']['quicklinks_html'] = "
 			<form method=\"post\" id=\"quicklinks_form\" name=\"quicklinks_form\" action=\"javascript:MM_jumpMenuGo('quicklinks','parent',0)\">
-								<table cellpadding=\"0\" cellspacing=\"0\" summary=\"This table is used for the visual layout of the QuickLinks navigation feature. The QuickLinks navigation feature allows you to use a combo-box to select a page and a submit button to jump to that page. This feature requires a browser that supports JavaScript.\">
+								<table cellpadding=\"0\" cellspacing=\"0\">
 									<tr>
 										<td>				
 				                            <a class=\"access\" name=\"quicklinks\" aria-label=\"NC State University Quick Links Navgiation\">NC State Quick Links</a>
@@ -210,7 +208,7 @@ function phptemplate_preprocess_page(&$vars) {
 	if(theme_get_setting('select_brand_bar') == 0) {
 		$vars['page']['noBrandBarDefaultTopMenu'] = '
 			<h2 title="North Carolina State University">
-				<a href="http://www.ncsu.edu" title="North Carolina State University">North Carolina State University</a>
+				<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="Nort Carolina State University" src="' . base_path().path_to_theme() . '/images/base/ncsu_text_beside_belltower.png"></a>
 			</h2>
 			<ul id="noBrandBarDefaultTopMenuNav">
 				<li>

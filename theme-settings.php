@@ -4,16 +4,14 @@
 function phptemplate_settings($saved_settings) {
 	
 	$defaults = array(
-    	'select_brand_bar' 				=> 2,
+    	'select_brand_bar' 				=> 0,
     	'show_belltower' 				=> 1,
 		'bold_title_text'	      		=> 'MY',
 		'regular_title_text'      		=> 'DRUPAL WEBSITE',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
-		'copyright_information' 		=> '© 2010 Your Name.',
-		'select_brand_bar'				=> 2,
-		'show_belltower'				=> 1,
+		'copyright_information' 		=> '© 2011',
 		'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
   	);
   	
