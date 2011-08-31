@@ -6,8 +6,7 @@ function phptemplate_settings($saved_settings) {
 	$defaults = array(
     	'select_brand_bar' 				=> 0,
     	'show_belltower' 				=> 1,
-		'bold_title_text'	      		=> 'MY',
-		'regular_title_text'      		=> 'DRUPAL WEBSITE',
+		'site_title_url' 				=> base_path().path_to_theme() . '/images/base/site_title_image.png',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
@@ -45,25 +44,16 @@ function phptemplate_settings($saved_settings) {
     ),
   );
   
-  $form['bold_title_text'] = array(
-    '#title' => 'Bold Title Text',
-    '#description' => t('The text in the title that should be in bold (like the "NC STATE" if your title was "NC STATE UNIVERSITY"'), 
+  $form['site_title_url'] = array(
+    '#title' => 'Site Title Image URL',
+    '#description' => t('Full URL (including http://) of the image to use for the site title in the main banner'), 
     '#type' => 'textfield',
-    '#default_value' => $settings['bold_title_text'],
+    '#default_value' => $settings['site_title_url'],
     '#size' => 60, 
     '#maxlength' => 128, 
     '#required' => TRUE,
   );
-  $form['regular_title_text'] = array(
-    '#title' => 'Regular Title Text',
-    '#description' => t('The text in the title bar that should be in regular font (like the "UNIVERSITY" if your title was "NC STATE UNIVERSITY"'), 
-    '#type' => 'textfield',
-    '#default_value' => $settings['regular_title_text'],
-    '#size' => 60, 
-    '#maxlength' => 128, 
-    '#required' => TRUE,
-  );
-	
+  
   $form['show_breadcrumbs'] = array(
     '#title' => 'Show Breadcrumbs when available', 
     '#type' => 'select',

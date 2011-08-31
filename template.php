@@ -21,8 +21,7 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
   $defaults = array(
     	'select_brand_bar' 				=> 0,
     	'show_belltower' 				=> 1,
-		'bold_title_text'	      		=> 'MY',
-		'regular_title_text'      		=> 'DRUPAL WEBSITE',
+		'site_title_url' 				=> base_path().path_to_theme() . '/images/base/site_title_image.png',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
