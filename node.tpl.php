@@ -20,7 +20,8 @@
   <div class="clear-block">
     <div class="meta">
     <?php if ($taxonomy): ?>
-      <div class="terms"><?php print $terms ?></div>
+        <div class="terms-title">Tags: </div>
+        <div class="terms"><?php print $terms ?></div>
     <?php endif;?>
     </div>
 
