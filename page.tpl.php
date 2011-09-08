@@ -10,30 +10,16 @@
 	<body>
 	<!-- start accessibility links -->
 		<div class="access">
-			<h2 aria-label="Accessibility Navigation List">Accessibility Navigation:</h2>
+			<h2>Accessibility Navigation:</h2>
 				<ul>
-		        	<li><a href="#main-content" title="Skip to main content area">Skip to Main Content Area</a></li>
-		        	<?php if($breadcrumb): ?>
-		        		<li><a href="#breadcrumb" title="Skip to breadcrumbs">Skip to breadcrumb list</a></li>
-		        	<?php endif; ?>
-		        	<?php if($page['region-widths']['show-left-region']): ?>
-		        		<li><a href="#left-sidebar" title="Skip to left sidebar (primary navigation area)">Skip to left sidebar (primary navigation area)</a></li>
-		        	<?php endif; ?>
-		            <?php if($page['region-widths']['show-right-region']): ?>
-		            	<li><a href="#right-sidebar" title="Skip to right sidebar">Skip to right sidebar</a></li>
-		            <?php endif; ?>
-		        	<?php if(theme_get_setting('select_brand_bar') != 0): ?>
-                        <li><a href="#brand-bar" title="Skip to brand bar">Skip to NC State Brand Bar navigation</a></li>
-                    <?php endif; ?>
-		        	<li><a href="#quicklinks" title="Skip to NC State Quick Links">Skip to NC State Quick Links</a></li>
-		            <?php if($page['header_search']): ?>
-		            	<li><a href="#site-search" title="Skip to search this site">Skip to search this site</a></li>
-		            <?php endif; ?>
-		            <li><a href="#footer" title="Skip to footer">Skip to footer</a></li>
+		        	<li><a href="#main-content-anchor" title="Skip to main content area">Skip to Main Content Area</a></li>
 				</ul>
 		</div>
+        <div class="skipNav">
+            <a href="#main-content-anchor" title="Skip to main content area">Skip to the main content area</a>
+        </div>
 	<!-- end accessibility links -->
-	<!-- show either the default red menu at the top of the header region, or the nbrandbar  -->
+	<!-- show either the default red menu at the top of the header region, or the brand bar  -->
 	<?php if(theme_get_setting('select_brand_bar') != 0): ?>
         <div id="region-brandbar-container">
             <a class="access" name="brand-bar">NC State Brand Bar</a>
@@ -60,7 +46,7 @@
 					<?php endif; ?>
 					<div id="region-header-left" class="grid_<?php echo $page['region-widths']['region-header-left-width']; ?>">
 				        <a href="<?php echo base_path(); ?>" title="Return to the homepage of this website">
-				        	<img alt="Site Title: <?php echo $site_name; ?>" title="Site Title: <?php echo $site_name; ?>" aria-label="Site Title: <?php echo $site_name; ?>" id="siteTitleImage" src="<?php echo theme_get_setting('site_title_url'); ?>" />
+				        	<img alt="Site Title: <?php echo $site_name; ?>" title="Site Title: <?php echo $site_name; ?>" id="siteTitleImage" src="<?php echo base_path().path_to_theme(); ?>/images/base/site_title_image.png" />
 				        </a>
 				    </div>
 				    <?php if ($page['region-widths']['show-right-header-region']): ?>
@@ -104,21 +90,21 @@
 									<?php endif; ?>
 									<?php if($left_primary_menu): ?>
 										<div id="left-main-menu" class="grid_<?php echo $page['region-widths']['left-region-width']; ?>">
-											<div id="left-main-menu-content" role="navigation" aria-label="Left Region Primary Menu">		
+											<div id="left-main-menu-content" role="navigation" aria-label="Primary Menu Region">		
 												<?php print $left_primary_menu; ?>
 											</div>
 										</div>
 									<?php endif; ?>
 									<?php if($left_secondary_menu): ?>
 										<div id="left-sub-menu" class="grid_<?php echo $page['region-widths']['left-region-width']; ?>">
-											<div id="left-sub-menu-content" role="navigation" aria-label="Left Region Secondary Menu">
+											<div id="left-sub-menu-content" role="navigation" aria-label="Secondary Menu Region">
 												<?php print $left_secondary_menu; ?>
 											</div>
 										</div>
 									<?php endif; ?>
 									<?php if($left_below_menu): ?>
 										<div id="left-below-menu" class="grid_<?php echo $page['region-widths']['left-region-width']; ?>">
-								      		<div id="left-below-menu-content" role="navigation" aria-label="Left Region Below Menus">	
+								      		<div id="left-below-menu-content" role="navigation" aria-label="Region Below Primary and Secondary Menus">	
 												<?php print $left_below_menu; ?>
 											</div>
 										</div>
@@ -143,18 +129,18 @@
 									</div>
 								</div>
 							<?php endif; ?>
+                            <a class="access" name="main-content-anchor"></a>
 							<?php if($main_image): ?>
 								<div id="region-main-image" class="grid_<?php echo $page['region-widths']['center-right-region-width']; ?>">
-									<div class="alpha omega" aria-label="Main Image">
+									<div class="alpha omega">
 										<?php print $main_image; ?>
 									</div>
 								</div>
 							<?php endif; ?>
 							<div id="region-center-content-container" class="container_<?php echo $page['region-widths']['center-region-width']; ?>">
-								<a class="access" name="main-content"></a>
                                 <div id="main-content-wrapper" class="grid_<?php echo $page['region-widths']['center-region-width']; ?>">	
 									<?php if($main_above_content): ?>
-                                        <div id="above-main-content" aria-label="Above Main Content Area">  
+                                        <div id="above-main-content">  
 	                                    	<?php print($main_above_content); ?>
                                         </div>
                                 	<?php endif; ?>
@@ -172,7 +158,7 @@
 										<?php print $feed_icons ?>
 									</div>
                                     <?php if($main_below_content): ?>
-	                                    <div id="below-main-content" aria-label="Below Main Content Area">  
+	                                    <div id="below-main-content">  
 	                                        <?php print($main_below_content); ?>
 		                                </div>
 									<?php endif; ?>
@@ -184,21 +170,21 @@
 									<div id="region-right-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
 										<?php if($right_above_sidebar): ?>
 											<div id="right-above-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-												<div id="right-above-sidebar-content" aria-label="Right Top Sidebar">
+												<div id="right-above-sidebar-content">
 													<?php print $right_above_sidebar; ?>
 												</div>
 											</div>
 										<?php endif; ?>
 										<?php if($right_center_sidebar): ?>
 											<div id="right-center-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-												<div id="right-center-sidebar-content" aria-label="Right Center Sidebar">
+												<div id="right-center-sidebar-content">
 													<?php print $right_center_sidebar; ?>
 												</div>
 											</div>
 										<?php endif; ?>
 										<?php if($right_below_sidebar): ?>
 											<div id="right-below-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-												<div id="right-below-sidebar-content" aria-label="Right Below Sidebar">
+												<div id="right-below-sidebar-content">
 													<?php print $right_below_sidebar; ?>
 												</div>
 											</div>
