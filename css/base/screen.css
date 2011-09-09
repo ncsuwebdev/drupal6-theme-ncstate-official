@@ -445,6 +445,19 @@ body {
     padding: 0 0 4px 0;
 }
 
+/* 4th level of links */
+#left-main-menu .content .menu li ul li ul li ul li a {
+    background-color: #7a7a7a;
+    padding: 5px 0 5px 50px;
+    background-image: url("../../images/base/bullet_nav_lvl3.gif");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 40px 0.7em;
+}
+#left-main-menu .content .menu li ul li ul li ul li a:hover, #left-main-menu .content .menu li ul li ul li ul li a:focus, #left-main-menu .content .menu li ul li ul li ul li a:active {
+    background-color: #848383;
+}
+
 /*----------------------------------------------------------------------------------------------------------
     LEFT SECONDARY (SUB) MENU HEADER LIST/LINK STYLES 
 ----------------------------------------------------------------------------------------------------------*/

@@ -9,12 +9,6 @@
 	</head>
 	<body>
 	<!-- start accessibility links -->
-		<div class="access">
-			<h2>Accessibility Navigation:</h2>
-				<ul>
-		        	<li><a href="#main-content-anchor" title="Skip to main content area">Skip to Main Content Area</a></li>
-				</ul>
-		</div>
         <div class="skipNav">
             <a href="#main-content-anchor" title="Skip to main content area">Skip to the main content area</a>
         </div>
