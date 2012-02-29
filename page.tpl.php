@@ -6,6 +6,7 @@
 		<title><?php print $head_title; ?></title>
 		<?php print $styles; ?>
 		<?php print $scripts; ?>
+        <style type="text/css" media="all"><?php print $dynamic_styles; ?></style>
 	</head>
 	<body>
 	<!-- start accessibility links -->

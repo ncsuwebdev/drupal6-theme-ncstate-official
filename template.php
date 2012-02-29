@@ -19,16 +19,15 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
    * matches the $defaults in the theme-settings.php file.
    */
   $defaults = array(
-    	'select_brand_bar' 				=> 2,
+    	'select_brand_bar' 				=> 0,
+    	'anniversary_header'			=> 0,
     	'show_belltower' 				=> 1,
 		'bold_title_text'	      		=> 'MY',
 		'regular_title_text'      		=> 'DRUPAL WEBSITE',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
-		'copyright_information' 		=> '© 2010 Your Name.',
-		'select_brand_bar'				=> 2,
-		'show_belltower'				=> 1,
+		'copyright_information' 		=> '© ' . date('Y', time()),
 		'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
   	);
 
@@ -58,7 +57,7 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
  *   A string containing the breadcrumb output.
  */
 
-function phptemplate_breadcrumb($breadcrumb) {
+function ncstate_official_breadcrumb($breadcrumb) {
   // Wrap separator with span element.
   if (!empty($breadcrumb)) {
     // Provide a navigational heading to give context for breadcrumb links to
@@ -72,10 +71,16 @@ function phptemplate_breadcrumb($breadcrumb) {
 /**
  * Override or insert PHPTemplate variables into the templates.
  */
-function phptemplate_preprocess_page(&$vars) {
+function ncstate_official_preprocess_page(&$vars, $hook) {
   $vars['tabs2'] = menu_secondary_local_tasks();
 
   
+  	/* Add dynamic stylesheet */
+  	ob_start();
+  	//include('dynamic.css.php');
+  	include(drupal_get_path('theme', 'ncstate_official') . '/css/base/dynamic.css.php');
+  	$vars['dynamic_styles'] = ob_get_contents();
+  	ob_end_clean();  
 	
 	// Drupal wants us to set the indexes/custom variables ahead of time, or it will throw an error for the world to see (it will work, just with errors)
 	$vars['page']['region-widths']['show-left-region'] = '';
@@ -208,9 +213,15 @@ function phptemplate_preprocess_page(&$vars) {
 	// menu that sits on top of the red header region, if there is no brand bar displayed
 	
 	if(theme_get_setting('select_brand_bar') == 0) {
+		
+		$image = 'ncsu_text_beside_belltower.png';
+		if(theme_get_setting('anniversary_header')) {
+			$image = '125-anniversary-stripbrick-redonwhite.gif';
+		}
+		
 		$vars['page']['noBrandBarDefaultTopMenu'] = '
 			<h2 title="North Carolina State University">
-				<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/ncsu_text_beside_belltower.png"></a>
+				<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/' . $image .'"></a>
 			</h2>
 			<ul id="noBrandBarDefaultTopMenuNav">
 				<li>
@@ -274,14 +285,14 @@ function ncstate_official_preprocess_comment_wrapper(&$vars) {
  *
  * @ingroup themeable
  */
-function phptemplate_menu_local_tasks() {
+function ncstate_official_menu_local_tasks() {
   return menu_primary_local_tasks();
 }
 
 /**
  * Returns the themed submitted-by string for the comment.
  */
-function phptemplate_comment_submitted($comment) {
+function ncstate_official_comment_submitted($comment) {
   return t('!datetime — !username',
     array(
       '!username' => theme('username', $comment),
@@ -292,7 +303,7 @@ function phptemplate_comment_submitted($comment) {
 /**
  * Returns the themed submitted-by string for the node.
  */
-function phptemplate_node_submitted($node) {
+function ncstate_official_node_submitted($node) {
   return t('!datetime — !username',
     array(
       '!username' => theme('username', $node),

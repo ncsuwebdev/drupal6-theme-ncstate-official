@@ -1,8 +1,12 @@
-/* 
- * Change base font size, based on the selection made on the theme settings page 
- * [yoursite]/admin/appearance/settings/ncstate_official
-*/
-
-body {
-  font-size: <?php echo theme_get_setting('base_font_size'); ?>;
-}
+/* dynamic styles set via the theme options page inside the Drupal site by an Administrator */
+<?php if(!theme_get_setting('show_belltower')): // move menu div to the left to line up with the edge of the layout ?>
+    #region-noBrandBarDefaultTopMenu {
+        width: 880px;
+        left: 17px;
+    }
+<?php endif; ?>
+<?php if(theme_get_setting('anniversary_header')): ?>
+    #noBrandBarDefaultTopMenuNav {
+        left: 130px;
+    }
+<?php endif; ?>
