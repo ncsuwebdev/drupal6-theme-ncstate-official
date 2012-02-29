@@ -1,1 +1,41 @@
 /* put all custom screen styles in this file. Do not edit any of the files in the css/base directory */
+
+.view-taxonomy-table table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.view-taxonomy-table thead {
+    background-color: #555;
+    color: #FFF;
+}
+.view-taxonomy-table thead a {
+    color: #FFF !important;
+}
+.view-taxonomy-table thead img {
+    margin-left: 10px;
+}
+
+.view-taxonomy-table td, .view-taxonomy-table th {
+    padding: 5px;
+}
+#repealedMessage {
+    min-height: 20px;
+    border: 3px solid #000000;
+    text-align: center;
+    padding: 5px;
+    color: #FFFFFF;
+    background-color: #CC0000;
+}
+#repealedMessage a {
+    color: #ffc700;
+    text-decoration: none !important;
+}
+#repealedMessage a:hover {
+    text-decoration: underline !important;
+}
+#main-content .content a {
+    text-decoration: underline !important;
+}
+#main-content .content table a {
+    text-decoration: none !important;
+}

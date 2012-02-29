@@ -19,13 +19,16 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
    * matches the $defaults in the theme-settings.php file.
    */
   $defaults = array(
-    	'select_brand_bar' 				=> 0,
+    	'select_brand_bar' 				=> 2,
     	'show_belltower' 				=> 1,
-		'site_title_url' 				=> base_path().path_to_theme() . '/images/base/site_title_image.png',
+		'bold_title_text'	      		=> 'MY',
+		'regular_title_text'      		=> 'DRUPAL WEBSITE',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
-		'copyright_information' 		=> '© 2011',
+		'copyright_information' 		=> '© 2010 Your Name.',
+		'select_brand_bar'				=> 2,
+		'show_belltower'				=> 1,
 		'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
   	);
 
@@ -127,7 +130,7 @@ function phptemplate_preprocess_page(&$vars) {
 		// set the quicklinks code here
 		$vars['page']['region-widths']['quicklinks_html'] = "
 			<form method=\"post\" id=\"quicklinks_form\" name=\"quicklinks_form\" action=\"javascript:MM_jumpMenuGo('quicklinks','parent',0)\">
-								<table cellpadding=\"0\" cellspacing=\"0\">
+								<table cellpadding=\"0\" cellspacing=\"0\" summary=\"This table is used for the visual layout of the QuickLinks navigation feature. The QuickLinks navigation feature allows you to use a combo-box to select a page and a submit button to jump to that page. This feature requires a browser that supports JavaScript.\">
 									<tr>
 										<td>				
 				                            <a class=\"access\" name=\"quicklinks\" aria-label=\"NC State University Quick Links Navgiation\">NC State Quick Links</a>
@@ -207,7 +210,7 @@ function phptemplate_preprocess_page(&$vars) {
 	if(theme_get_setting('select_brand_bar') == 0) {
 		$vars['page']['noBrandBarDefaultTopMenu'] = '
 			<h2 title="North Carolina State University">
-				<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="Nort Carolina State University" src="' . base_path().path_to_theme() . '/images/base/ncsu_text_beside_belltower.png"></a>
+				<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/ncsu_text_beside_belltower.png"></a>
 			</h2>
 			<ul id="noBrandBarDefaultTopMenuNav">
 				<li>
@@ -243,7 +246,7 @@ function phptemplate_preprocess_page(&$vars) {
 	            <li><a href="http://www.ncsu.edu/copyright/index.php" title="North Carolina State University copyright policy">Copyright</a></li>
 	            <li><a href="http://ncsu.edu/it/access/legal/webreg.php" title="North Carolina State University website accessibility information">Accessibility</a></li>
 	            <li><a href="http://www.ncsu.edu/diversity/" title="Diversity at NC State">Diversity</a></li>
-	            <li><a href="http://www.ncsu.edu/policies/index.php" title="North Carolina State University Policies">University Policies</a></li>
+	            <li><a href="http://policies.ncsu.edu" title="North Carolina State University Policies">University Policies</a></li>
 	            <li><a href="http://www.ncsu.edu/about-site/index.php" title="About the North Carolina State University website">About the Site</a></li>
 	            <li><a href="http://www7.acs.ncsu.edu/hr/job_applicants/" title="Jobs at North Carolina State University">Jobs</a></li>
 	            <li class="last"><a href="http://www.ncsu.edu/contact-us/index.php" title="Contact North Carolina State University">Contact Us</a></li>

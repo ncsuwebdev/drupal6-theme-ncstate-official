@@ -2,17 +2,16 @@
 
 //needs to be cleaned up and validated/verified that there's no holes in it...but it works for now...
 
+// get the text from the variable passed to it, and convert to upper case (as per branding styles)
+$width = $_GET['width'];
+$boldText = $_GET['boldText'];
+$regularText = $_GET['regularText'];
 
 // Create a ? x 40 image (the space available in the header section of the theme)
-$width = $_GET['width'];
 $height = 40;
 
 // set the height of the font (used for the height of the image too + some padding)
 $fontSize = 35;
-
-// get the text from the variable passed to it, and convert to upper case (as per branding styles)
-$boldText = strtoupper($_GET['boldText']);
-$regularText = strtoupper($_GET['regularText']);
 
 // set up base image, and colors to be used in the image (black not used for this page, but left for reference later)
 $im = imagecreatetruecolor($width, $height);
@@ -24,8 +23,8 @@ $white = imagecolorallocate($im, 255, 255, 255);
 imagefilledrectangle($im, 0, 0, $width, 299, $red);
 
 // Path to our font files
-$regularFont = 'UVC_____.ttf';
-$boldFont = 'UVCB____.ttf';
+$regularFont = 'UVC_____.TTF';
+$boldFont = 'UVCB____.TTF';
 
 // First we create our bounding box for the first text
 $boldBox = imagettfbbox($fontSize, 0, $boldFont, $boldText);
@@ -52,7 +51,6 @@ imagecolortransparent ($im,$red);
 
 //write the image to the <THEMEROOT>/images/base directory for use in page.tpl.php
 imagepng($im, '../images/base/site_title_image.png');
-
 
 /*
  * 

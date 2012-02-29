@@ -208,6 +208,10 @@ body {
 #region-noBrandBarDefaultTopMenu li.last {
     background-image: none;
 }
+#noBrandBarDefaultTopMenuNav {
+    margin: 0;
+    padding: 0;
+}
 
 
 
