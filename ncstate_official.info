@@ -1,9 +1,13 @@
 ; $Id: ncstate_official.info,v 1.5 2011/02/07 23:27:32 njyoung Exp $
 name = NC State University Official Top Level Theme (Drupal 6)
-description = Official University Theme for NC State University (for use on Drupal 6 only)
+project = ncstate_official
+description = Official Theme for NC State University (for use on Drupal 6 only)
 version = 6.x-1.0
 core = 6.x
 engine = phptemplate
+
+; for updates to the theme, specify features server location
+project status url = http://drupal.ncsu.edu/features/fserver
 
 ;stylesheets[all][] = style.css
 ;stylesheets[print][] = print.css
