@@ -41,7 +41,7 @@
 					<?php endif; ?>
 					<div id="region-header-left" class="grid_<?php echo $page['region-widths']['region-header-left-width']; ?>">
 				        <a href="<?php echo base_path(); ?>" title="Return to the homepage of this website">
-				        	<img alt="Site Title: <?php echo $site_name; ?>" title="Site Title: <?php echo $site_name; ?>" id="siteTitleImage" src="<?php echo base_path().path_to_theme(); ?>/images/base/site_title_image.png" />
+				        	<img alt="Site Title: <?php echo $site_name; ?>" title="Site Title: <?php echo $site_name; ?>" id="siteTitleImage" src="<?php echo theme_get_setting('title_image_url'); ?>" />
 				        </a>
 				    </div>
 				    <?php if ($page['region-widths']['show-right-header-region']): ?>

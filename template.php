@@ -18,12 +18,12 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
    * The default values for the theme variables. Make sure $defaults exactly
    * matches the $defaults in the theme-settings.php file.
    */
+    
   $defaults = array(
     	'select_brand_bar' 				=> 0,
     	'anniversary_header'			=> 0,
     	'show_belltower' 				=> 1,
-		'bold_title_text'	      		=> 'MY',
-		'regular_title_text'      		=> 'DRUPAL WEBSITE',
+		'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,

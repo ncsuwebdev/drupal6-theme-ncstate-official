@@ -7,8 +7,7 @@ function ncstate_official_settings($saved_settings) {
     	'select_brand_bar' 				=> 0,
     	'anniversary_header'			=> 0,
     	'show_belltower' 				=> 1,
-		'bold_title_text'	      		=> 'MY',
-		'regular_title_text'      		=> 'DRUPAL WEBSITE',
+		'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
@@ -57,22 +56,13 @@ function ncstate_official_settings($saved_settings) {
     ),
   );
   
-  $form['bold_title_text'] = array(
-    '#title' => 'Bold Title Text',
-    '#description' => t('The text in the title that should be in bold (like the "NC STATE" if your title was "NC STATE UNIVERSITY"'), 
-    '#type' => 'textfield',
-    '#default_value' => $settings['bold_title_text'],
-    '#size' => 60, 
-    '#maxlength' => 128, 
-    '#required' => TRUE,
-  );
-  $form['regular_title_text'] = array(
+  $form['title_image_url'] = array(
     '#title' => 'Regular Title Text',
-    '#description' => t('The text in the title bar that should be in regular font (like the "UNIVERSITY" if your title was "NC STATE UNIVERSITY"'), 
+    '#description' => t('Transparent PNG / GIF that will function as the title of your site. OIT Design (http://oitdesign.ncsu.edu) can create this correctly for you.'), 
     '#type' => 'textfield',
-    '#default_value' => $settings['regular_title_text'],
+    '#default_value' => $settings['title_image_url'],
     '#size' => 60, 
-    '#maxlength' => 128, 
+    '#maxlength' => 255, 
     '#required' => TRUE,
   );
 	
