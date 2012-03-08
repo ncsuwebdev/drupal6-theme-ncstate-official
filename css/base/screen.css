@@ -224,7 +224,7 @@ body {
 }
 
 #content-area {
-
+    margin: 2px 0 0 0;
 }
 
 .content-area-background-with-left-column {
@@ -761,6 +761,7 @@ body {
 #region-main-image {
     height: 285px;
     overflow: hidden;
+    margin: 0 0 5px 2px;
 }
 
 #region-main-image img {
@@ -837,19 +838,6 @@ body {
     text-transform: uppercase;
     font-size: 1.2em;
     color: #CC0000;
-}
-
-.messages, .warning, .error {
-    padding: 5px;
-    background-color: #CC0000 !important;
-    color: #FFFFFF !important;
-    border: 2px solid #000000 !important;
-    margin: 1em 0 1em 0; 
-}
-
-.messages a, .warning a, .error a {
-    color: #FFFFFF !important;
-    text-decoration: underline !important;
 }
 
 /* make the default tables created by Drupal expand to the width of the container they appear in */
@@ -929,5 +917,4 @@ div.meta {
     margin-bottom: 10px;
     border: 1px solid #000;
 }
-
 
