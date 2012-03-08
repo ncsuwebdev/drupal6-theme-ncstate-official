@@ -889,6 +889,19 @@ div.meta {
     border: 1px #ccc solid;
 }
 
+.messages, .warning, .error {
+    padding: 5px;
+    background-color: #a20000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #000000 !important;
+    margin: 1em 0 1em 0; 
+}
+
+.messages a, .warning a, .error a {
+    color: #FFFFFF !important;
+    text-decoration: underline !important;
+}
+
 /*----------------------------------------------------------------------------------------------------------
     GCAL_EVENTS MODULE BLOCKS (DEFAULT SETTINGS)
 ----------------------------------------------------------------------------------------------------------*/
