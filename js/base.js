@@ -59,7 +59,44 @@ jQuery(document).ready(function() {
 		
 	}
 	
-	
+	if($('.featured-content-slider').length > 0) {    
+        /*
+         * Featured Content Slider based on jquery cycle
+         * 
+         */
+        
+        $('.featured-content-slider')
+        	.after('<div id="featured-content-slider-overlay">');
+        
+        $('.featured-content-slider .view-content').each(function(index, el) { 
+        	
+        	$(this).find('.views-field-title, .views-field-view-node, .views-field-teaser ').css(
+        			{ 'text-align': 'right', 'position': 'relative', 'top': '-' + $(this).find('.views-field-image-attach-images img').attr('height') / 4 + 'px' 
+        		});
+        	});
+        
+        $('.featured-content-slider .view-content')
+        .before('<div id="featured-content-slider-nav">') 
+        .cycle({ 
+            fx:     'fade', 
+            speed:   1000, 
+            timeout: 5000, 
+            pause:   1,
+            cleartype: true,
+            cleartypeNoBg: true,
+            pager: '#featured-content-slider-nav',
+            pagerAnchorBuilder: function(idx, slide) {
+                var img = $(slide).children().eq(0).attr("src");
+                return '<li><a href="#"><img class="featured-content-slider-thumbnail" src="' + jQuery(slide).find('img').attr('src') + '" width="140" height="60" /></a></li>';
+              },
+            //after: onAfter 
+        });
+        /*
+        function onAfter() { 
+            $('#featured-content-slider-overlay').html('<p>' + this.alt + '</p>');
+        }
+        */
+	}
 	
 	
 });

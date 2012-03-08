@@ -29,6 +29,10 @@ stylesheets[print][] = custom/css/custom-print.css
 ; javascript that will run on the entire website
 scripts[] = js/base.js
 
+; FILES FOR THE CYCLE PLUGIN
+scripts[]           = js/plugins/jquery.cycle/jquery.cycle.all.min.js
+stylesheets[all][]  = css/base/plugins/jquery.cycle/jquery.cycle.css
+
 ; set features to NULL, so none of the defaults are displayed
 features[] = NULL
 
