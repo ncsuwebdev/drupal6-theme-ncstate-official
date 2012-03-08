@@ -839,6 +839,19 @@ body {
     color: #CC0000;
 }
 
+.messages, .warning, .error {
+    padding: 5px;
+    background-color: #CC0000 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #000000 !important;
+    margin: 1em 0 1em 0; 
+}
+
+.messages a, .warning a, .error a {
+    color: #FFFFFF !important;
+    text-decoration: underline !important;
+}
+
 /* make the default tables created by Drupal expand to the width of the container they appear in */
 table.sticky-enabled, table.views-table {
     width: 100%;
