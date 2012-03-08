@@ -508,6 +508,16 @@ body {
     background-color: #434343;
 }
 
+#left-below-menu-content .block .content a {
+    color: #CC0000;
+    text-decoration: underline;   
+}
+
+#left-below-menu-content .block .content a:hover {
+    color: #a20000;
+    text-decoration: underline;   
+}
+
 /*----------------------------------------------------------------------------------------------------------
     RIGHT REGION LAYOUT
 ----------------------------------------------------------------------------------------------------------*/
