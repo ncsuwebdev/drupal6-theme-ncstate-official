@@ -8,6 +8,8 @@ function ncstate_official_settings($saved_settings) {
     	'anniversary_header'			=> 0,
     	'show_belltower' 				=> 1,
 		'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
+		'site_title_vertical_offset'    => '0px',
+		'site_title_horizontal_offset'  => '0px',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
@@ -57,12 +59,32 @@ function ncstate_official_settings($saved_settings) {
   );
   
   $form['title_image_url'] = array(
-    '#title' => 'Regular Title Text',
+    '#title' => 'Site Title Image Full URL',
     '#description' => t('Transparent PNG / GIF that will function as the title of your site. OIT Design (http://oitdesign.ncsu.edu) can create this correctly for you.'), 
     '#type' => 'textfield',
     '#default_value' => $settings['title_image_url'],
     '#size' => 60, 
     '#maxlength' => 255, 
+    '#required' => TRUE,
+  );
+  
+  $form['site_title_vertical_offset'] = array(
+    '#title' => 'Site Title Vertical Offset (px)',
+    '#description' => t('Move the site title vertically (helpful if you change the size or font options). NOTE: include "px" on the end of your offset.'), 
+    '#type' => 'textfield',
+    '#default_value' => $settings['site_title_vertical_offset'],
+    '#size' => 6, 
+    '#maxlength' => 5, 
+    '#required' => TRUE,
+  );
+  
+  $form['site_title_horizontal_offset'] = array(
+    '#title' => 'Site Title Horizontal Offset (px)',
+    '#description' => t('Move the site title horizontally (helpful if you change the size or font options). NOTE: include "px" on the end of your offset.'), 
+    '#type' => 'textfield',
+    '#default_value' => $settings['site_title_horizontal_offset'],
+    '#size' => 6, 
+    '#maxlength' => 5, 
     '#required' => TRUE,
   );
 	

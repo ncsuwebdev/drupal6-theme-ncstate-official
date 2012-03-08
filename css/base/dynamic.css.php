@@ -10,3 +10,10 @@
         left: 130px;
     }
 <?php endif; ?>
+
+
+#siteTitleImage {
+    position: relative;
+    top: <?php echo theme_get_setting('site_title_vertical_offset'); ?>;
+    left: <?php echo theme_get_setting('site_title_horizontal_offset'); ?>;
+}

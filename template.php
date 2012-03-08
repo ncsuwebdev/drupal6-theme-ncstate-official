@@ -24,6 +24,8 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
     	'anniversary_header'			=> 0,
     	'show_belltower' 				=> 1,
 		'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
+  		'site_title_vertical_offset'    => '0px',
+		'site_title_horizontal_offset'  => '0px',
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
