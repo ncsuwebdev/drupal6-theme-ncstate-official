@@ -218,12 +218,14 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 		
 		$image = 'ncsu_text_beside_belltower.png';
 		if(theme_get_setting('anniversary_header')) {
-			$image = '125-anniversary-stripbrick-redonwhite.gif';
+			$imageText = '125-anniversary-stripbrick-redonwhite.gif';
+			$image125 = '125-anniversary-stripbrick125-redonwhite.gif';
 		}
 		
 		$vars['page']['noBrandBarDefaultTopMenu'] = '
 			<h2 title="North Carolina State University">
-				<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/' . $image .'"></a>
+				<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/' . $imageText .'"></a>
+				<a href="http://125.ncsu.edu" title="125th Anniversary Website for North Carolina State University"><img class="ncsu-text" alt="125.ncsu.edu" src="' . base_path().path_to_theme() . '/images/base/' . $image125 .'"></a>
 			</h2>
 			<ul id="noBrandBarDefaultTopMenuNav">
 				<li>

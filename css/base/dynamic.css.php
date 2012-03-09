@@ -7,7 +7,7 @@
 <?php endif; ?>
 <?php if(theme_get_setting('anniversary_header')): ?>
     #noBrandBarDefaultTopMenuNav {
-        left: 130px;
+        left: 128px;
     }
 <?php endif; ?>
 
