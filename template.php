@@ -76,7 +76,29 @@ function ncstate_official_breadcrumb($breadcrumb) {
 function ncstate_official_preprocess_page(&$vars, $hook) {
   $vars['tabs2'] = menu_secondary_local_tasks();
 
+  /*
+  echo '<pre><hr /><hr /><hr /><hr /><hr /><hr />';
+  print_r($vars);
+  die();
+  */
   
+  	// check to see if this is an admin or another known protected page. If it is, then do not show the left or right regions (to maximize space for those awesome drupal tables that overlap the divs so nicely ;-)
+  	$forceHideLeftRightRegions = false;
+  	
+  	// these are the paths on which to hide the left/right regions
+  	$matchPaths = array(
+  		'page-admin',
+  		'page-node-webform',
+  		'page-node-webform-results',
+  		'page-node-edit'
+  	);
+  	
+  	foreach($vars['template_files'] as $key => $value) {
+  		if(in_array($value, $matchPaths)) {
+  			$forceHideLeftRightRegions = true;
+  		}
+  	}
+  	
   	/* Add dynamic stylesheet */
   	ob_start();
   	//include('dynamic.css.php');
@@ -92,16 +114,19 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 	$vars['page']['region-widths']['maxPageWidth'] = 90;// maximum number of columns in the grid system
 	
 	// check to see if there are left or right regions to make it easier to set widths of regions below
-	if($vars['left_above_menu'] || $vars['left_primary_menu'] || $vars['left_secondary_menu'] || $vars['left_below_menu']) { 
-		// there is something in the left region, so set the necessary widths here
-		$vars['page']['region-widths']['show-left-region'] = true;
-		$vars['page']['region-widths']['left-region-width'] = 20;
-	}
-		
-	if($vars['right_above_sidebar'] || $vars['right_center_sidebar'] || $vars['right_below_sidebar'] || $vars['right_below_sidebar_brown'] || $vars['right_below_sidebar_green'] || $vars['right_below_sidebar_red']) {
-		// there is something in the right region, so set the necessary widths here
-		$vars['page']['region-widths']['show-right-region'] = true;
-		$vars['page']['region-widths']['right-region-width'] = 25;
+	if(!$forceHideLeftRightRegions) {
+		if($vars['left_above_menu'] || $vars['left_primary_menu'] || $vars['left_secondary_menu'] || $vars['left_below_menu']) { 
+			// there is something in the left region, so set the necessary widths here
+			$vars['page']['region-widths']['show-left-region'] = true;
+			$vars['page']['region-widths']['left-region-width'] = 20;
+		}
+	} 
+	if(!$forceHideLeftRightRegions) {	
+		if($vars['right_above_sidebar'] || $vars['right_center_sidebar'] || $vars['right_below_sidebar'] || $vars['right_below_sidebar_brown'] || $vars['right_below_sidebar_green'] || $vars['right_below_sidebar_red']) {
+			// there is something in the right region, so set the necessary widths here
+			$vars['page']['region-widths']['show-right-region'] = true;
+			$vars['page']['region-widths']['right-region-width'] = 25;
+		}
 	}
 	// now check to see for combinations of the left and right showing or not, and set the swidth accordingly
 	// set the center/right region width (everything to the right of the left region)

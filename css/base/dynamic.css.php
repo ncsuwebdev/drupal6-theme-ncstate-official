@@ -11,7 +11,6 @@
     }
 <?php endif; ?>
 
-
 #siteTitleImage {
     position: relative;
     top: <?php echo theme_get_setting('site_title_vertical_offset'); ?>;
