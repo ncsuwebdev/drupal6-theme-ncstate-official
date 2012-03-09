@@ -184,6 +184,28 @@
 												</div>
 											</div>
 										<?php endif; ?>
+                                        <?php if($right_below_sidebar_brown): ?>
+                                            <div id="right-below-sidebar-brown" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                                <div id="right-below-sidebar-brown-content">
+                                                    <?php print $right_below_sidebar_brown; ?>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if($right_below_sidebar_green): ?>
+                                            <div id="right-below-sidebar-green" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                                <div id="right-below-sidebar-green-content">
+                                                    <?php print $right_below_sidebar_green; ?>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if($right_below_sidebar_red): ?>
+                                            <div id="right-below-sidebar-red" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                                <div id="right-below-sidebar-red-content">
+                                                    <?php print $right_below_sidebar_red; ?>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                        
 									</div>
 								</div>
 							<?php endif; ?>

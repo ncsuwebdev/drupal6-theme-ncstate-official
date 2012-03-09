@@ -541,7 +541,10 @@ body {
 
 #right-above-sidebar,
 #right-center-sidebar,
-#right-below-sidebar {
+#right-below-sidebar,
+#right-below-sidebar-brown,
+#right-below-sidebar-green,
+#right-below-sidebar-red {
     margin: 5px;
 }
 
@@ -550,14 +553,20 @@ body {
 ----------------------------------------------------------------------------------------------------------*/
 #right-above-sidebar-content,
 #right-center-sidebar-content,
-#right-below-sidebar-content {
+#right-below-sidebar-content,
+#right-below-sidebar-brown-content,
+#right-below-sidebar-green-content,
+#right-below-sidebar-red-content {
     margin: 0 10px 5px 0;
     color: #FFF;
 }
 
 #right-above-sidebar-content .content,
 #right-center-sidebar-content .content,
-#right-below-sidebar-content .content {
+#right-below-sidebar-content .content,
+#right-below-sidebar-brown-content .content,
+#right-below-sidebar-green-content .content,
+#right-below-sidebar-red-content .content {
     padding: 5px;
 }
 
@@ -565,13 +574,21 @@ body {
     margin: 0 0 5px 0 !important;
 }
 
-#right-above-sidebar-content .content p,#right-center-sidebar-content .content p,#right-below-sidebar-content .content p {
+#right-above-sidebar-content .content p,
+#right-center-sidebar-content .content p,
+#right-below-sidebar-content .content p,
+#right-below-sidebar-brown-content .content p,
+#right-below-sidebar-green-content .content p,
+#right-below-sidebar-red-content .content p {
     line-height: 1.4em;
 }
 
 #right-above-sidebar-content h2,
 #right-center-sidebar-content h2,
-#right-below-sidebar-content h2 {
+#right-below-sidebar-content h2,
+#right-below-sidebar-brown-content h2,
+#right-below-sidebar-green-content h2,
+#right-below-sidebar-red-content h2 {
     display: block;
     line-height: 1.3em;
     padding: 5px;
@@ -602,6 +619,28 @@ body {
 
 #right-below-sidebar-content h2 {
     background-color: #4C637F;
+}
+
+#right-below-sidebar-brown-content .content {
+    background-color: #a39574;
+}
+
+#right-below-sidebar-brown-content h2 {
+    background-color: #857758;
+}
+#right-below-sidebar-green-content .content {
+    background-color: #7b8854;
+}
+
+#right-below-sidebar-green-content h2 {
+    background-color: #6d7a46;
+}
+#right-below-sidebar-red-content .content {
+    background-color: #b61405;
+}
+
+#right-below-sidebar-red-content h2 {
+    background-color: #880b02;
 }
 
 /*----------------------------------------------------------------------------------------------------------
@@ -685,6 +724,15 @@ body {
 #region-right-sidebar-container #right-below-sidebar-content .block-menu h2 {
     background-color: #4c637f;
 }
+#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu h2 {
+    background-color: #857758;
+}
+#region-right-sidebar-container #right-below-sidebar-green-content .block-menu h2 {
+    background-color: #6d7a46;
+}
+#region-right-sidebar-container #right-below-sidebar-red-content .block-menu h2 {
+    background-color: #880b02;
+}
 
 /* LIST ITEM LINK COLORS */ 
 
@@ -697,6 +745,15 @@ body {
 #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a {
     background-color: #6E839C;
 }
+#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li a {
+    background-color: #a39574;
+}
+#region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li a {
+    background-color: #7b8854;
+}
+#region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li a {
+    background-color: #b61405;
+}
 
 /* LIST ITEM HOVER COLORS */
 #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:active {
@@ -707,6 +764,15 @@ body {
 }
 #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:active {
     background-color:#4c637f;
+}
+#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li a:active {
+    background-color:#857758;
+}
+#region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li a:active {
+    background-color:#6d7a46;
+}
+#region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li a:active {
+    background-color:#880b02;
 }
 
 /* SUB LIST LIST ITEM COLORS */
@@ -720,6 +786,15 @@ body {
 #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li ul li a {
     background-color: #62738F;
 }
+#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li ul li a {
+    background-color: #8d8161;
+}
+#region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li ul li a {
+    background-color: #717f4c;
+}
+#region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li ul li a {
+    background-color: #941b0b;
+}
 
 /* SECOND SET OF SUB LINKS */
 #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li ul li ul li a {
@@ -731,6 +806,16 @@ body {
 #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li ul li ul li a {
     background-color: #62738F;
 }
+#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li ul li ul li a {
+    background-color: #8d8161;
+}
+#region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li ul li ul li a {
+    background-color: #717f4c;
+}
+#region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li ul li ul li a {
+    background-color: #941b0b;
+}
+
 
 
 /*----------------------------------------------------------------------------------------------------------
