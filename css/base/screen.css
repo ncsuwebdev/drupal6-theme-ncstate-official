@@ -366,7 +366,7 @@ body {
 }
 
 #left-sub-menu {
-    margin: 4px 0 0 0;
+    margin: 2px 0 0 0;
     background-color: #666666;
 }
 
@@ -847,7 +847,7 @@ body {
     border-width: 1px 0;
     padding: 4px 13px 2px 13px;
     color: #5c5541;
-    margin: 4px 0 4px 3px;
+    margin: 6px 0 4px 3px;
     line-height: 1.0em;
 }
 
