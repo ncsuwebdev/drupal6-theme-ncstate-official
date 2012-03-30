@@ -187,6 +187,12 @@ body {
     text-decoration: underline;
 }
 
+.anniversaryBrick {
+    position: relative;
+    top: -3px;
+}
+
+
 #region-noBrandBarDefaultTopMenu ul {
     list-style-type:none;
     float: left;

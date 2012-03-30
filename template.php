@@ -247,8 +247,8 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 			$imageText = '125-anniversary-stripbrick-redonwhite.gif';
 			$image125 = '125-anniversary-stripbrick125-redonwhite.gif';
 			
-			$logoLink = '<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/' . $imageText .'"></a>
-						<a href="http://125.ncsu.edu" title="125th Anniversary Website for North Carolina State University"><img class="ncsu-text" alt="125.ncsu.edu" src="' . base_path().path_to_theme() . '/images/base/' . $image125 .'"></a>';
+			$logoLink = '<a class="anniversaryBrick" href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/' . $imageText .'"></a>
+						<a class="anniversaryBrick" href="http://125.ncsu.edu" title="125th Anniversary Website for North Carolina State University"><img class="ncsu-text" alt="125.ncsu.edu" src="' . base_path().path_to_theme() . '/images/base/' . $image125 .'"></a>';
 		} else {
 			
 			$imageText = 'ncsu_text_beside_belltower.png';
@@ -257,7 +257,7 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 		}
 		
 		$vars['page']['noBrandBarDefaultTopMenu'] = '
-			<h2 title="North Carolina State University">
+			<h2 class="brickHeaderLogo" title="North Carolina State University">
 				' . $logoLink . '
 			</h2>
 			<ul id="noBrandBarDefaultTopMenuNav">
