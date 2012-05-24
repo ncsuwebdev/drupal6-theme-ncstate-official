@@ -65,8 +65,19 @@
 					<?php endif; ?>
 				</div>
 			</div>
-			
 			<!--  End header container region -->
+			<!--  START Horizontal Menu Region -->
+			<?php if($horizontal_main_menu): ?>
+				<div id="horizontal-menu-container" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>">
+					<?php if($horizontal_main_menu): ?>
+						<div id="horizontal-main-menu">
+							<a class="access" name="horizontal-main-menu">Horizontal Main Menu</a>
+							<?php print $horizontal_main_menu; ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
+			<!--  End horizontal menu -->
 			<!-- Start 3 column layout area -->
 			<div id="content-area-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
 				<div id="content-area" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?> <?php if($page['region-widths']['show-left-region']): echo 'content-area-background-with-left-column'; else: echo 'content-area-background-without-left-column'; endif;?>">

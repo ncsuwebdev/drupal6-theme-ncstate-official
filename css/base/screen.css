@@ -220,6 +220,89 @@ body {
 }
 
 
+/*----------------------------------------------------------------------------------------------------------
+    HORIZONTAL MENU CONTAINER
+----------------------------------------------------------------------------------------------------------*/
+
+/* hide block title and all 2nd level menus */
+#horizontal-main-menu h2 {
+    display: none;
+}
+
+#horizontal-main-menu ul ul li {
+    display: none;
+}
+
+/* administration menu built into drupal or enabled via module */
+#admin-menu {
+    z-index: 100 !important;
+}
+
+/*
+ ***********************************************************************
+ * MAIN MENU STYLES  
+ ************************************************************************
+*/
+
+#horizontal-menu-container {
+    margin: 4px 0 1px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#horizontal-main-menu {
+    background-color: #333333;
+    padding: 0;
+}
+#horizontal-main-menu ul.menu {
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+}
+
+/* remove any previously set margins and paddings */
+#horizontal-main-menu * { 
+    margin: 0; 
+    padding: 0;
+}
+
+/* remove <li> list styling off */
+#horizontal-main-menu li { 
+    list-style: none;
+    border-right: 1px solid #cfcdc8;
+}
+
+#horizontal-main-menu li a {
+    font-size: 13px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 15px 0 15px;
+}
+#horizontal-main-menu li a:hover {
+   
+}
+
+#horizontal-main-menu li.last {
+    border: none;
+}
+
+#horizontal-main-menu li {
+    list-style: none;
+}
+#horizontal-main-menu a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* set <li> position */
+#horizontal-main-menu li { 
+    float: left; 
+    position: relative;
+}
 
 
 /*----------------------------------------------------------------------------------------------------------
