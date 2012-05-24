@@ -3,7 +3,7 @@
 name = NC State University Official Top Level Theme (Drupal 6)
 project = ncstate_official
 description = Official Theme for NC State University (for use on Drupal 6 only)
-version = 6.x-1.5
+version = 6.x-1.6
 core = 6.x
 engine = phptemplate
 
