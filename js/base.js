@@ -97,6 +97,13 @@ jQuery(document).ready(function() {
         }
         */
 	}
+
+  if($('#horizontal-menu-container').length > 0) {
+  
+    // hide all 2nd level lists, until the user hovers over (then display the sub-list)
+    $('#horizontal-menu-container li ul').hide();
+    
+  }
 	
 	
 });

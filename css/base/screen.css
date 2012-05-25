@@ -229,7 +229,7 @@ body {
     display: none;
 }
 
-#horizontal-main-menu ul ul li {
+#horizontal-main-menu li ul {
     display: none;
 }
 
