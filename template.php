@@ -29,6 +29,7 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
+		'show_default_horizontal_menu'	=> 0,
 		'copyright_information' 		=> '© ' . date('Y', time()),
 		'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
   	);
@@ -285,6 +286,21 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 			</ul>'; 
 	}
 	
+	// check for main horizontal menu. If configured by user, display it. If not configured by user, check the theme setting to decide if to show the default menu.
+	if (theme_get_setting('show_default_horizontal_menu') && !$vars['horizontal_main_menu'] && !$forceHideLeftRightRegions) {
+		$vars['horizontal_main_menu'] = '
+			<ul class="menu">
+				<li class="collapsed first"><a href="http://www.ncsu.edu/current-students" title="">Current Students</a></li>				
+				<li class="leaf"><a href="http://www.ncsu.edu/future-students" title="">Future Students</a></li>
+				<li class="leaf"><a href="http://www.ncsu.edu/faculty-and-staff" title="">Faculty and Staff</a></li>
+				<li class="leaf"><a href="http://www.ncsu.edu/parents" title="">Parents and Family</a></li>
+				<li class="leaf"><a href="http://www.ncsu.edu/alumni" title="">Alumni</a></li>
+				<li class="leaf last"><a href="http://www.ncsu.edu/partners" title="">Partners</a></li>
+			</ul>';
+	} else {
+		$vars['horizontal_main_menu'] = $vars['horizontal_main_menu'];
+	}
+
 	// check for footer horizontal menu. If configured by user, display it. If not configured by user, display default menu.
 	if(!$vars['footer_menu']) {
 		$vars['footer_menu'] = '

@@ -13,6 +13,7 @@ function ncstate_official_settings($saved_settings) {
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
+    'show_default_horizontal_menu'  => 0,
 		'copyright_information' 		=> '© ' . date('Y', time()),
 		'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
   	);
@@ -86,6 +87,17 @@ function ncstate_official_settings($saved_settings) {
     '#size' => 6, 
     '#maxlength' => 5, 
     '#required' => TRUE,
+  );
+
+  $form['show_default_horizontal_menu'] = array(
+    '#type' => 'select',
+     '#title' => 'Show Default Horizontal Menu?',
+    '#default_value' => $settings['show_default_horizontal_menu'],
+    '#description' => t('Set whether to show the default horiztonal menu. This is only used if you have not set a block to display in that region via the block administration page.'), 
+    '#options' => array(
+      0 => 'False',
+      1 => 'True',
+    ),
   );
 	
   $form['show_breadcrumbs'] = array(
