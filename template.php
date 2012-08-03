@@ -278,7 +278,7 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 					<a href="http://mypack.ncsu.edu" title="North Carolina State University Portal">MyPack Portal</a>
 				</li>
 				<li>
-					<a href="giving/index.php" title="Giving to North Carolina State University">Giving</a>
+					<a href="http://giving.ncsu.edu" title="Giving to North Carolina State University">Giving</a>
 				</li>
 				<li class="last">
 					<a href="http://www.ncsu.edu/campus_map/" title="North Carolina State University Campus Map">Campus Map</a>
