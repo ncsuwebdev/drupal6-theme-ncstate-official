@@ -5,11 +5,11 @@ body {
 }
 
 #page-container {
-    
+
 }
 
 /*----------------------------------------------------------------------------------------------------------
-    ACCESSIBILITY 
+    ACCESSIBILITY
 ----------------------------------------------------------------------------------------------------------*/
 .access {
     position: absolute;
@@ -39,17 +39,17 @@ body {
 
 
 /*----------------------------------------------------------------------------------------------------------
-    BRAND BAR REGION 
+    BRAND BAR REGION
 ----------------------------------------------------------------------------------------------------------*/
 #region-brandbar-container {
-    
+
 }
 
 /*----------------------------------------------------------------------------------------------------------
-    HEADER 
+    HEADER
 ----------------------------------------------------------------------------------------------------------*/
 #region-header-container {
-    
+
 }
 
 #region-header-left-belltower {
@@ -240,7 +240,7 @@ body {
 
 /*
  ***********************************************************************
- * MAIN MENU STYLES  
+ * MAIN MENU STYLES
  ************************************************************************
 */
 
@@ -264,13 +264,13 @@ body {
 }
 
 /* remove any previously set margins and paddings */
-#horizontal-main-menu * { 
-    margin: 0; 
+#horizontal-main-menu * {
+    margin: 0;
     padding: 0;
 }
 
 /* remove <li> list styling off */
-#horizontal-main-menu li { 
+#horizontal-main-menu li {
     list-style: none;
     border-right: 1px solid #cfcdc8;
 }
@@ -283,7 +283,7 @@ body {
     padding: 0 15px 0 15px;
 }
 #horizontal-main-menu li a:hover {
-   
+
 }
 
 #horizontal-main-menu li.last {
@@ -299,8 +299,8 @@ body {
 }
 
 /* set <li> position */
-#horizontal-main-menu li { 
-    float: left; 
+#horizontal-main-menu li {
+    float: left;
     position: relative;
 }
 
@@ -309,7 +309,7 @@ body {
     CONTENT AREA CONTAINER (EVERYTHING UNDERNEATH THE HEADER AND ABOVE THE FOOTER)
 ----------------------------------------------------------------------------------------------------------*/
 .content-area-container {
-    
+
 }
 
 #content-area {
@@ -420,8 +420,35 @@ body {
     color: #CC0000;
 }
 
+#comments .comment {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+#comments .comment-unpublished {
+  font-style: italic !important;
+}
+#comments .links li a {
+  padding: 5px 10px;
+  background: #d7d7d7;
+  border: 1px solid #000;
+  color: #000 !important;
+}
+#comments .links li a:hover {
+  background: #51555c;
+  color: #FFFFFF;
+  border: 1px solid #CC0000;
+}
+#comments .indented {
+  border-left: 7px solid #CCC;
+  padding-left: 1em;
+}
+#comments .submitted {
+  font-style: italic;
+}
+
 /*----------------------------------------------------------------------------------------------------------
-    LEFT REGION LAYOUT 
+    LEFT REGION LAYOUT
 ----------------------------------------------------------------------------------------------------------*/
 #region-left-menu-area-container {
     line-height: 1.55em;
@@ -469,7 +496,7 @@ body {
 }
 
 /*----------------------------------------------------------------------------------------------------------
-    LEFT MENU HEADER LIST/LINK STYLES 
+    LEFT MENU HEADER LIST/LINK STYLES
 ----------------------------------------------------------------------------------------------------------*/
 
 #region-left-menu .block ul {
@@ -551,7 +578,7 @@ body {
 }
 
 /*----------------------------------------------------------------------------------------------------------
-    LEFT SECONDARY (SUB) MENU HEADER LIST/LINK STYLES 
+    LEFT SECONDARY (SUB) MENU HEADER LIST/LINK STYLES
 ----------------------------------------------------------------------------------------------------------*/
 #left-sub-menu {
     padding: 10px 0 10px 0;
@@ -607,12 +634,12 @@ body {
 
 #left-below-menu-content .block .content a {
     color: #CC0000;
-    text-decoration: underline;   
+    text-decoration: underline;
 }
 
 #left-below-menu-content .block .content a:hover {
     color: #a20000;
-    text-decoration: underline;   
+    text-decoration: underline;
 }
 
 /*----------------------------------------------------------------------------------------------------------
@@ -746,8 +773,8 @@ body {
 
 
 #region-right-sidebar-container ul.menu li,
-#region-right-sidebar-container .block-menu, 
-#region-right-sidebar-container .block-menu .content, 
+#region-right-sidebar-container .block-menu,
+#region-right-sidebar-container .block-menu .content,
 #region-right-sidebar-container .block-menu .content ul  {
     padding: 0;
     margin: 0;
@@ -783,7 +810,7 @@ body {
 
 /* first set of sub links underneath the main menu */
 #region-right-sidebar-container .block-menu .content .menu li ul li a {
-    
+
     padding: 5px 0 5px 30px;
     background-image: url("../../images/base/bullet_nav_lvl3.gif");
     background-repeat: no-repeat;
@@ -793,7 +820,7 @@ body {
 
 /* second set of sub links underneath the main menu */
 #region-right-sidebar-container .block-menu .content .menu li ul li ul li a {
-    
+
     padding: 5px 0 5px 40px;
     background-image: url("../../images/base/bullet_nav_lvl3.gif");
     background-repeat: no-repeat;
@@ -831,7 +858,7 @@ body {
     background-color: #880b02;
 }
 
-/* LIST ITEM LINK COLORS */ 
+/* LIST ITEM LINK COLORS */
 
 #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a {
     background-color: #C49C01;
@@ -948,7 +975,7 @@ body {
 }
 
 /*----------------------------------------------------------------------------------------------------------
-    MAIN IMAGE (SLIDER OR STATIC) 
+    MAIN IMAGE (SLIDER OR STATIC)
 ----------------------------------------------------------------------------------------------------------*/
 #region-main-image {
     height: 285px;
@@ -1004,7 +1031,7 @@ body {
 }
 
 #footer-horizontal-menu li.last {
-    
+
 }
 
 #footer-horizontal-menu ul li a {
@@ -1036,7 +1063,7 @@ body {
 table.sticky-enabled, table.views-table {
     width: 100%;
     margin-bottom: 1.5em;
-   
+
 }
 table.sticky-enabled thead, table.views-table thead {
     border-bottom: 2px solid #CCC;
@@ -1062,12 +1089,12 @@ div.meta {
 
 /* basic formatting for tables that appear in the main content area */
 #main-content .node table {
-    margin: 1em; 
+    margin: 1em;
     border-collapse: collapse;
 }
 
-#main-content .node table td, #main-content .node table th { 
-    padding: 0.3em; 
+#main-content .node table td, #main-content .node table th {
+    padding: 0.3em;
     border: 1px #ccc solid;
 }
 
@@ -1076,7 +1103,7 @@ div.meta {
     background-color: #a20000 !important;
     color: #FFFFFF !important;
     border: 2px solid #000000 !important;
-    margin: 1em 0 1em 0; 
+    margin: 1em 0 1em 0;
 }
 
 .messages a, .warning a, .error a {
