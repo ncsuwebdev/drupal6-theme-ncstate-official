@@ -8,6 +8,10 @@
 	$themePath = "var theme_path = '". path_to_theme() . "';";
 	drupal_add_js($themePath, 'inline');
 
+  drupal_add_js(array('ncstate_official' => array(
+      'slider_transition_time' => theme_get_setting('slider_transition_time'),
+    )), 'setting');
+
 /*
 * Initialize theme settings
 */
@@ -319,11 +323,6 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 	} else {
 		$vars['footer_menu'] = $vars['footer_menu'];
 	}
-
-  drupal_add_js(array('primer' => array(
-      'slider_transition_time' => theme_get_setting('slider_transition_time'),
-    )), 'setting');
-
 
 
 }

@@ -80,7 +80,7 @@ jQuery(document).ready(function() {
         .cycle({
             fx:     'fade',
             speed:   1000,
-            timeout: Drupal.settings.primer.slider_transition_time,
+            timeout: Drupal.settings.ncstate_official.slider_transition_time,
             pause:   1,
             cleartype: true,
             cleartypeNoBg: true,
