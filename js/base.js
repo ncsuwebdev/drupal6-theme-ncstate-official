@@ -25,12 +25,12 @@ function MM_jumpMenuGo(selName,targ,restore){ //v3.0
   var selObj = MM_findObj(selName); if (selObj) MM_jumpMenu(targ,selObj,restore);
 }
 jQuery(document).ready(function() {
-	
+
 	if (jQuery('#edit-search-block-form--2')) {
 		var search = jQuery('#edit-search-block-form-1');
-	
+
 		search.val('Search this site...');
-		
+
 		search.focus(function(){
 	        if (search.val() == 'Search this site...') {
 	            search.val("");
@@ -40,13 +40,13 @@ jQuery(document).ready(function() {
 	            search.val('Search this site...');
 	        }
 	    });
-		
-		
-		
+
+
+
 		var $searchButton = jQuery('.form-submit', jQuery('#region-header-container'));
-		
+
 		// replace the search submit button with image
-		
+
 		var $input = jQuery('<input type="image" />')
 					.addClass('ncstate-search-button')
 					.attr('name', 'search')
@@ -54,33 +54,33 @@ jQuery(document).ready(function() {
 					.attr('title', 'search this site')
 					.attr('src', base_path + theme_path + '/images/base/head_btn_search.gif');
 		$input.insertBefore($searchButton);
-		
+
 		$searchButton.remove();
-		
+
 	}
-	
-	if($('.featured-content-slider').length > 0) {    
+
+	if($('.featured-content-slider').length > 0) {
         /*
          * Featured Content Slider based on jquery cycle
-         * 
+         *
          */
-        
+
         $('.featured-content-slider')
         	.after('<div id="featured-content-slider-overlay">');
-        
-        $('.featured-content-slider .view-content').each(function(index, el) { 
-        	
+
+        $('.featured-content-slider .view-content').each(function(index, el) {
+
         	$(this).find('.views-field-title, .views-field-view-node, .views-field-teaser ').css(
-        			{ 'text-align': 'right', 'position': 'relative', 'top': '-' + $(this).find('.views-field-image-attach-images img').attr('height') / 4 + 'px' 
+        			{ 'text-align': 'right', 'position': 'relative', 'top': '-' + $(this).find('.views-field-image-attach-images img').attr('height') / 4 + 'px'
         		});
         	});
-        
+
         $('.featured-content-slider .view-content')
-        .before('<div id="featured-content-slider-nav">') 
-        .cycle({ 
-            fx:     'fade', 
-            speed:   1000, 
-            timeout: 5000, 
+        .before('<div id="featured-content-slider-nav">')
+        .cycle({
+            fx:     'fade',
+            speed:   1000,
+            timeout: Drupal.settings.primer.slider_transition_time,
             pause:   1,
             cleartype: true,
             cleartypeNoBg: true,
@@ -89,21 +89,21 @@ jQuery(document).ready(function() {
                 var img = $(slide).children().eq(0).attr("src");
                 return '<li><a href="#"><img class="featured-content-slider-thumbnail" src="' + jQuery(slide).find('img').attr('src') + '" width="140" height="60" /></a></li>';
               },
-            //after: onAfter 
+            //after: onAfter
         });
         /*
-        function onAfter() { 
+        function onAfter() {
             $('#featured-content-slider-overlay').html('<p>' + this.alt + '</p>');
         }
         */
 	}
 
   if($('#horizontal-menu-container').length > 0) {
-  
+
     // hide all 2nd level lists, until the user hovers over (then display the sub-list)
     $('#horizontal-menu-container li ul').hide();
-    
+
   }
-	
-	
+
+
 });
