@@ -13,6 +13,7 @@ function ncstate_official_settings($saved_settings) {
 		'show_breadcrumbs'      		=> 1,
 		'breadcrumb_separator'		 	=> ' > ',
 		'show_quicklinks'				=> 1,
+    'show_post_info_on_search' => 0,
     'show_default_horizontal_menu'  => 0,
     'slider_transition_time'  => 5000,
 		'copyright_information' 		=> '© ' . date('Y', time()),
@@ -125,6 +126,16 @@ function ncstate_official_settings($saved_settings) {
     '#title' => 'Show Quicklinks menu in header',
     '#type' => 'select',
     '#default_value' => $settings['show_quicklinks'],
+    '#options' => array(
+      0 => 'False',
+      1 => 'True',
+    ),
+  );
+
+  $form['show_post_info_on_search'] = array(
+    '#title' => 'Show Post Information on Search Results',
+    '#type' => 'select',
+    '#default_value' => $settings['show_post_info_on_search'],
     '#options' => array(
       0 => 'False',
       1 => 'True',
