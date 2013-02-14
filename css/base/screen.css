@@ -315,6 +315,17 @@ body {
 #content-area {
     margin: 2px 0 0 0;
 }
+#content-area h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#content-area h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#content-area h5 {
+    font-size: 1.2em;
+}
 
 .content-area-background-with-left-column {
     background: url(../../images/base/content_2col_bg.png) repeat-y;
