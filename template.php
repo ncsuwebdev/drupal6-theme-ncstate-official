@@ -175,22 +175,27 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 				                            <a class=\"access\" name=\"quicklinks\" aria-label=\"NC State University Quick Links Navgiation\">NC State Quick Links</a>
 				                            <select id=\"quicklinks\" name=\"quicklinks\" title=\"Select a page to jump to (requires a browser that supports JavaScript)\">
 				                                <option selected=\"selected\">University Quicklinks...</option>
-				                                <option style=\"font-weight: bold\" value=\"#\">Customize Quicklinks</option>
-				                                <option value=\"http://www.ncsu.edu/registrar/calendars/\">Academic Calendar</option>
-				                                <option value=\"http://www.fis.ncsu.edu/ncsubookstores/\">Bookstore</option>
-				                                <option value=\"http://www.ncsu.edu//about-nc-state/university-administration/index.html\">Campus Administration</option>
-				                                <option value=\"http://www.fis.ncsu.edu/cashier/\">Cashier&#39;s Office</option>
-				                                <option value=\"http://www.ncsu.edu//about-nc-state/centennial-campus/index.html\">Centennial Campus</option>
-				                                <option value=\"http://www.ncsu.edu//academics/index.html\">Colleges &#38; Academic Departments</option>
-				                                <option value=\"http://distance.ncsu.edu\">Distance Education</option>
-				                                <option value=\"http://www7.acs.ncsu.edu/financial_aid/\">Financial Aid &#38; Scholarships</option>
-				                                <option value=\"http://www2.acs.ncsu.edu/grad/\">Graduate School</option>
-				                                <option value=\"http://www.ncsu.edu//campus-life/housing/index.html\">Housing</option>
-				                                <option value=\"http://www.ncsu.edu/registrar/\">Registration &#38; Records</option>
-				                                <option value=\"http://www.fis.ncsu.edu/uga/\">Undergraduate Admissions</option>
-				                                <option value=\"http://vista.ncsu.edu\">Vista Courses</option>
-				                                <option value=\"https://webmail.ncsu.edu/src/login.php\">Webmail</option>
-				                                <option value=\"http://courses.ncsu.edu\">Wolfware Courses</option>
+				                                <option value=\"http://ncsu.collegestoreonline.com/\">Bookstore</option>
+				                                <option value=\"http://www.ncsu.edu/registrar/calendars\">Calendar (Academic)</option>
+				                                <option value=\"http://www.ncsu.edu/about-nc-state/university-administration/planning-leadership\">Campus Administration</option>
+				                                <option value=\"http://campuspolice.ehps.ncsu.edu/index.php\">Campus Police</option>
+				                                <option value=\"http://www.fis.ncsu.edu/cashier\">Cashier's Office</option>
+				                                <option value=\"http://www.ncsu.edu/about-nc-state/centennial-campus/index.php\">Centennial Campus</option>
+                                                                <option value=\"http://www.ncsu.edu/academics/departments-a-z/index.php\">Colleges &amp; Academic Departments</option>
+                                                                <option value=\"http://www.ncsudining.com/dining/index.html\">Dining</option>
+                                                                <option value=\"http://distance.ncsu.edu\">Distance Education</option>
+                                                                <option value=\"http://www7.acs.ncsu.edu/financial_aid\">Financial Aid &amp; Scholarships</option>
+                                                                <option value=\"http://www.ncsu.edu/grad\">Graduate School</option>
+                                                                <option value=\"http://healthcenter.ncsu.edu\">Health Services</option>
+                                                                <option value=\"http://www.ncsu.edu/housing\">Housing</option>
+                                                                <option value=\"http://oia.ncsu.edu\">International</option>
+                                                                <option value=\"http://m.ncsu.edu\">Mobile Website</option>
+                                                                <option value=\"http://www.fis.ncsu.edu/rm/budget_central\">NC State Budget Central</option>
+                                                                <option value=\"http://oit.ncsu.edu\">Office of Information Technology</option>
+                                                                <option value=\"http://www.ncsu.edu/registrar\">Registration &amp; Records</option>
+                                                                <option value=\"http://admissions.ncsu.edu\">Undergraduate Admissions</option>
+                                                                <option value=\"http://gmail.ncsu.edu\">Gmail Web Access</option>
+                                                                <option value=\"https://wolfware.ncsu.edu\">Wolfware</option>
 				                            </select>
 										</td>
 										<td><input type=\"image\" src=\"" . base_path().path_to_theme() . "/images/base/head_btn_qlinks.gif\" class=\"btn_qlinks quicklinks-button\" alt=\"Jump to the page selected from the Quicklinks combo-box\" title=\"Jump to the page selected from the Quicklinks combo-box\" /></td>
