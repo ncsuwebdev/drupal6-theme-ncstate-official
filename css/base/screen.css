@@ -301,17 +301,18 @@ body {
 
 #content-area {
     margin: 2px 0 0 0;
+    font-size: 12px;
 }
 #content-area h3 {
-    font-size: 1.5em;
+    font-size: 16px;
     font-weight: bold;
 }
 #content-area h4 {
-    font-size: 1.2em;
+    font-size: 14px;
     font-weight: bold;
 }
 #content-area h5 {
-    font-size: 1.2em;
+    font-size: 14px;
 }
 
 .content-area-background-with-left-column {
@@ -348,8 +349,8 @@ body {
 }
 
 #main-content #page-title h1 {
-    font-size: 2em;
-    line-height: 1.2em;
+    font-size: 18px;
+    line-height: 18px;
     font-weight: normal;
     color: #CC0000; /* NC State Red */
 }
@@ -511,7 +512,7 @@ body {
     line-height: 1.3em;
     padding: 10px 0 10px 20px;
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 12px;
     font-weight: bold;
     background-color: #171717;
     background-image: url("../../images/base/bullet_nav_active.gif");
@@ -526,7 +527,7 @@ body {
 }
 
 #left-main-menu .content .menu li a {
-    font-size: 1.2em;
+    font-size: 12px;
     color: #fff;
     text-decoration: none;
     display: block;
@@ -587,7 +588,7 @@ body {
     line-height: 1.3em;
     padding: 10px 0 10px 20px;
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 14px;
     font-weight: bold;
     background-color: #171717;
     background-image: url("../../images/base/bullet_nav_active.gif");
@@ -608,7 +609,7 @@ body {
     padding: 3px 0 3px 20px;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 14px;
     font-weight: bold;
     color: #FFF;
     background-image: url("../../images/base/bullet_nav.gif");
@@ -626,7 +627,7 @@ body {
     line-height: 1.3em;
     padding: 10px 0 10px 0px;
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -700,7 +701,7 @@ body {
     margin: 0 0 5px 0 !important;
 }
 #region-right-sidebar-container .block .content {
-    font-size: 1.2em;
+    font-size: 12px;
 }
 
 #right-main-sidebar-content .content p {
@@ -723,7 +724,7 @@ body {
     background-repeat:no-repeat no-repeat;
     color:#FFFFFF;
     display:inline-block;
-    font-size:1.2em;
+    font-size: 12px;
     letter-spacing:1px;
     padding:5px 40px 5px 10px;
     text-transform:uppercase;
@@ -754,7 +755,7 @@ body {
     background-repeat:no-repeat no-repeat;
     color:#FFFFFF;
     display:inline-block;
-    font-size:1.2em;
+    font-size:12px;
     letter-spacing:1px;
     padding:5px 40px 5px 10px;
     text-transform:uppercase;
@@ -767,7 +768,7 @@ body {
 }
 
 #region-right-sidebar-container .block-menu .content .menu li a {
-    font-size: 1.1em;
+    font-size: 12px;
     color: #cc0000;
     text-decoration: none;
     display: block;
