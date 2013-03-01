@@ -129,7 +129,7 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 		}
 	}
 	if(!$forceHideLeftRightRegions) {
-		if($vars['right_above_sidebar'] || $vars['right_center_sidebar'] || $vars['right_below_sidebar'] || $vars['right_below_sidebar_brown'] || $vars['right_below_sidebar_green'] || $vars['right_below_sidebar_red']) {
+		if($vars['right_main_sidebar']) {
 			// there is something in the right region, so set the necessary widths here
 			$vars['page']['region-widths']['show-right-region'] = true;
 			$vars['page']['region-widths']['right-region-width'] = 25;

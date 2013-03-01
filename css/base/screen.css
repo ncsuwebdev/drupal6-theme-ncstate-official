@@ -658,10 +658,11 @@ body {
 ----------------------------------------------------------------------------------------------------------*/
 #region-right-sidebar-container {
     line-height: 1.55em;
+    color: #000;
 }
 
 #region-right-sidebar a, #region-right-sidebar a:visited {
-    color: #fff;
+    color: #cc0000;
     text-decoration: underline;
 }
 #region-right-sidebar a:hover, #region-right-sidebar a:focus, #region-right-sidebar a:active {
@@ -671,112 +672,76 @@ body {
 #region-right-sidebar {
     margin: 4px 0 0 0;
     overflow: hidden;
-    background-color: #E5E3D6;
+    /*background-color: #E5E3D6;*/
 }
 
-#right-above-sidebar,
-#right-center-sidebar,
-#right-below-sidebar,
-#right-below-sidebar-brown,
-#right-below-sidebar-green,
-#right-below-sidebar-red {
+#right-main-sidebar {
     margin: 5px;
 }
 
 /*----------------------------------------------------------------------------------------------------------
     RIGHT REGION CONTENT STYLES
 ----------------------------------------------------------------------------------------------------------*/
-#right-above-sidebar-content,
-#right-center-sidebar-content,
-#right-below-sidebar-content,
-#right-below-sidebar-brown-content,
-#right-below-sidebar-green-content,
-#right-below-sidebar-red-content {
-    margin: 0 10px 5px 0;
+#right-main-sidebar-content {
+    margin: 0 10px 0px 0;
     color: #FFF;
 }
 
-#right-above-sidebar-content .content,
-#right-center-sidebar-content .content,
-#right-below-sidebar-content .content,
-#right-below-sidebar-brown-content .content,
-#right-below-sidebar-green-content .content,
-#right-below-sidebar-red-content .content {
-    padding: 5px;
+#right-main-sidebar-content .content {
+    padding: 0px;
+}
+
+#region-right-sidebar-container .content .helper {
+  margin:0px;
+  /*background-image:url(../../images/base/sidebar-border.png); */
+  background-position:0 50%;
+  background-repeat:no-repeat repeat;
+  border: 1px solid #FF9897;
+  border-bottom: 0px;
+  padding:14px 20px 0px 20px;
+}
+#region-right-sidebar-container .block-bottom {
+  z-index: -100;
+  height: 32px;
+  margin:0px;
+  padding: 0px;
+  background-image:url(../../images/base/sidebar_border_bottom.png);
+  background-position:0 50%;
+  background-repeat:no-repeat;
+  position: relative;
+  bottom: 5px;
 }
 
 #region-right-sidebar-container .block {
     margin: 0 0 5px 0 !important;
 }
 
-#right-above-sidebar-content .content p,
-#right-center-sidebar-content .content p,
-#right-below-sidebar-content .content p,
-#right-below-sidebar-brown-content .content p,
-#right-below-sidebar-green-content .content p,
-#right-below-sidebar-red-content .content p {
+#right-main-sidebar-content .content p {
     line-height: 1.4em;
 }
 
-#right-above-sidebar-content h2,
-#right-center-sidebar-content h2,
-#right-below-sidebar-content h2,
-#right-below-sidebar-brown-content h2,
-#right-below-sidebar-green-content h2,
-#right-below-sidebar-red-content h2 {
+#right-main-sidebar-content h2 {
+    /*
     display: block;
     line-height: 1.3em;
     padding: 5px;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.6em;
     font-weight: normal;
+    */
+    background-color:#CC0000;
+    background-image:url(../../images/base/sidebar_header_cut.png);
+    background-position:100% 100%;
+    background-repeat:no-repeat no-repeat;
+    color:#FFFFFF;
+    display:inline-block;
+    font-size:1.2em;
+    letter-spacing:1px;
+    padding:5px 40px 5px 21px;
+    text-transform:uppercase;
+    width:auto;
 }
 
-#right-above-sidebar-content .content {
-    background-color: #C49C01;
-}
-
-#right-above-sidebar-content h2 {
-    background-color: #B68900;
-}
-
-#right-center-sidebar-content .content {
-    background-color: #000;
-}
-
-#right-center-sidebar-content h2 {
-    background-color: #434343;
-}
-
-#right-below-sidebar-content .content {
-    background-color: #6E839C;
-}
-
-#right-below-sidebar-content h2 {
-    background-color: #4C637F;
-}
-
-#right-below-sidebar-brown-content .content {
-    background-color: #a39574;
-}
-
-#right-below-sidebar-brown-content h2 {
-    background-color: #857758;
-}
-#right-below-sidebar-green-content .content {
-    background-color: #7b8854;
-}
-
-#right-below-sidebar-green-content h2 {
-    background-color: #6d7a46;
-}
-#right-below-sidebar-red-content .content {
-    background-color: #b61405;
-}
-
-#right-below-sidebar-red-content h2 {
-    background-color: #880b02;
-}
 
 /*----------------------------------------------------------------------------------------------------------
     RIGHT REGION MENU STYLES -- If a menu gets placed in the right-side-sidebar-container
@@ -786,7 +751,7 @@ body {
 #region-right-sidebar-container ul.menu li,
 #region-right-sidebar-container .block-menu,
 #region-right-sidebar-container .block-menu .content,
-#region-right-sidebar-container .block-menu .content ul  {
+#region-right-sidebar-container .block-menu .content ul {
     padding: 0;
     margin: 0;
 }
@@ -811,13 +776,11 @@ body {
 
 #region-right-sidebar-container .block-menu .content .menu li a {
     font-size: 1.1em;
-    color: #fff;
+    color: #cc0000;
     text-decoration: none;
     display: block;
     padding: 4px 10px 4px 20px;
 }
-
-
 
 /* first set of sub links underneath the main menu */
 #region-right-sidebar-container .block-menu .content .menu li ul li a {
@@ -843,115 +806,9 @@ body {
     padding: 0 0 5px 0;
 }
 
-/*----------------------------------------------------------------------------------------------------------
-    RIGHT REGION MENU COLOR STYLES (MENUS MATCH REGION COLORS --- TOP=GOLD, MIDDLE=GREY, BOTTOM=BLUE
-----------------------------------------------------------------------------------------------------------*/
-
-/* HEADERS - H2 TAG COLORS */
-
-#region-right-sidebar-container #right-above-sidebar-content .block-menu h2 {
-    background-color: #b68900;
+#region-right-sidebar-container .block .content {
+    color: #000;
 }
-
-#region-right-sidebar-container #right-center-sidebar-content .block-menu h2 {
-    background-color: #434343;
-}
-#region-right-sidebar-container #right-below-sidebar-content .block-menu h2 {
-    background-color: #4c637f;
-}
-#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu h2 {
-    background-color: #857758;
-}
-#region-right-sidebar-container #right-below-sidebar-green-content .block-menu h2 {
-    background-color: #6d7a46;
-}
-#region-right-sidebar-container #right-below-sidebar-red-content .block-menu h2 {
-    background-color: #880b02;
-}
-
-/* LIST ITEM LINK COLORS */
-
-#region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a {
-    background-color: #C49C01;
-}
-#region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li a {
-    background-color: #000;
-}
-#region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a {
-    background-color: #6E839C;
-}
-#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li a {
-    background-color: #a39574;
-}
-#region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li a {
-    background-color: #7b8854;
-}
-#region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li a {
-    background-color: #b61405;
-}
-
-/* LIST ITEM HOVER COLORS */
-#region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li a:active {
-    background-color: #b68900;
-}
-#region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li a:active {
-    background-color: #434343;
-}
-#region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li a:active {
-    background-color:#4c637f;
-}
-#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li a:active {
-    background-color:#857758;
-}
-#region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li a:active {
-    background-color:#6d7a46;
-}
-#region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li a:hover, #region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li a:focus, #region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li a:active {
-    background-color:#880b02;
-}
-
-/* SUB LIST LIST ITEM COLORS */
-
-#region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li ul li a {
-    background-color: #AF9000;
-}
-#region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li ul li a {
-    background-color: #515151;
-}
-#region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li ul li a {
-    background-color: #62738F;
-}
-#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li ul li a {
-    background-color: #8d8161;
-}
-#region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li ul li a {
-    background-color: #717f4c;
-}
-#region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li ul li a {
-    background-color: #941b0b;
-}
-
-/* SECOND SET OF SUB LINKS */
-#region-right-sidebar-container #right-above-sidebar-content .block-menu .content .menu li ul li ul li a {
-    background-color: #AF9000;
-}
-#region-right-sidebar-container #right-center-sidebar-content .block-menu .content .menu li ul li ul li a {
-    background-color: #515151;
-}
-#region-right-sidebar-container #right-below-sidebar-content .block-menu .content .menu li ul li ul li a {
-    background-color: #62738F;
-}
-#region-right-sidebar-container #right-below-sidebar-brown-content .block-menu .content .menu li ul li ul li a {
-    background-color: #8d8161;
-}
-#region-right-sidebar-container #right-below-sidebar-green-content .block-menu .content .menu li ul li ul li a {
-    background-color: #717f4c;
-}
-#region-right-sidebar-container #right-below-sidebar-red-content .block-menu .content .menu li ul li ul li a {
-    background-color: #941b0b;
-}
-
-
 
 /*----------------------------------------------------------------------------------------------------------
     CENTER AND RIGHT REGION CONTAINER (EVERYTHING TO THE RIGHT OF THE STATIC LEFT REGION

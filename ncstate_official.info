@@ -18,6 +18,7 @@ stylesheets[all][]   = css/960/reset.css
 stylesheets[all][]   = css/960/text.css
 stylesheets[all][]   = css/960/900_90_0_0.css
 
+
 ; styles provided by NC State University Communications Office
 stylesheets[all][]   = css/base/screen.css
 stylesheets[print][] = css/base/print.css
@@ -38,7 +39,7 @@ features[] = NULL
 
 regions[brandbar]                   = Brand Bar Region
 regions[header_search]              = Search Region in Header
-regions[horizontal_main_menu]		    = Horizontal Main Menu
+regions[horizontal_main_menu]       = Horizontal Main Menu
 regions[left_above_menu]            = Above Left Menu Region
 regions[left_primary_menu]          = Left Primary Menu
 regions[left_secondary_menu]        = Left Secondary Menu
@@ -47,12 +48,7 @@ regions[main_image]                 = Main Image
 regions[main_above_content]         = Above Main Content
 regions[content]                    = Main Content
 regions[main_below_content]         = Below Main Content
-regions[right_above_sidebar]        = Above Right Sidebar Region (Yellow)
-regions[right_center_sidebar]       = Right Center Sidebar Region (Black)
-regions[right_below_sidebar]        = Below Right Sidebar Region (Blue)
-regions[right_below_sidebar_brown]  = Below Right Sidebar Region (Brown)
-regions[right_below_sidebar_green]  = Below Right Sidebar Region (Green)
-regions[right_below_sidebar_red]    = Below Right Sidebar Region (Red)
+regions[right_main_sidebar]         = Right Main Sidebar
 regions[footer_menu]                = Footer Menu
 regions[footer_left_logo]           = Footer Left Logo
 regions[footer_right_text]          = Footer Right Text

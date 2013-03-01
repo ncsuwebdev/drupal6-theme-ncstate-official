@@ -56,7 +56,7 @@
 								<?php endif; ?>
 								<?php if(header_search): ?>
 									<a class="access" name="site-search">Search this site</a>    	
-							      	<div role="search" aria-label="Search this website" id="header-site-search<?php if (theme_get_setting('show_quicklinks')): echo '-with-quicklinks'; else: echo '-without-quicklinks'; endif; ?>">
+                                                                        <div role="search" aria-label="Search this website" id="header-site-search<?php if (theme_get_setting('show_quicklinks')): echo '-with-quicklinks'; else: echo '-without-quicklinks'; endif; ?>">
 										<?php print $header_search; ?>
 									</div>
 								<?php endif; ?>
@@ -167,57 +167,21 @@
 	                                    <div id="below-main-content">  
 	                                        <?php print($main_below_content); ?>
 		                                </div>
-									<?php endif; ?>
-								</div>
-							</div>
-							<?php if($page['region-widths']['show-right-region']): ?>
-								<a class="access" name="right-sidebar">Right Side Bar</a>    
-								<div id="region-right-sidebar-container" class="container_<?php echo $page['region-widths']['right-region-width']; ?>">
-									<div id="region-right-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-										<?php if($right_above_sidebar): ?>
-											<div id="right-above-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-												<div id="right-above-sidebar-content">
-													<?php print $right_above_sidebar; ?>
-												</div>
-											</div>
-										<?php endif; ?>
-										<?php if($right_center_sidebar): ?>
-											<div id="right-center-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-												<div id="right-center-sidebar-content">
-													<?php print $right_center_sidebar; ?>
-												</div>
-											</div>
-										<?php endif; ?>
-										<?php if($right_below_sidebar): ?>
-											<div id="right-below-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-												<div id="right-below-sidebar-content">
-													<?php print $right_below_sidebar; ?>
-												</div>
-											</div>
-										<?php endif; ?>
-                                        <?php if($right_below_sidebar_brown): ?>
-                                            <div id="right-below-sidebar-brown" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-                                                <div id="right-below-sidebar-brown-content">
-                                                    <?php print $right_below_sidebar_brown; ?>
-                                                </div>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if($right_below_sidebar_green): ?>
-                                            <div id="right-below-sidebar-green" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-                                                <div id="right-below-sidebar-green-content">
-                                                    <?php print $right_below_sidebar_green; ?>
-                                                </div>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if($right_below_sidebar_red): ?>
-                                            <div id="right-below-sidebar-red" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-                                                <div id="right-below-sidebar-red-content">
-                                                    <?php print $right_below_sidebar_red; ?>
-                                                </div>
-                                            </div>
-                                        <?php endif; ?>
-                                        
-									</div>
+                                    <?php endif; ?>
+                            </div>
+                    </div>
+                    <?php if($page['region-widths']['show-right-region']): ?>
+                            <a class="access" name="right-sidebar">Right Side Bar</a>    
+                            <div id="region-right-sidebar-container" class="container_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                    <div id="region-right-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                            <?php if($right_main_sidebar): ?>
+                                                    <div id="right-main-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                                        <div id="right-main-sidebar-content">
+                                                                <?php print $right_main_sidebar; ?>
+                                                        </div>
+                                                    </div>
+                                            <?php endif; ?>	
+						 			</div>
 								</div>
 							<?php endif; ?>
 						</div>
