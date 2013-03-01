@@ -1,5 +1,5 @@
 body {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-family: Aria, Helvetica, sans-serif;
     background: #fff;
     font-size: 62.5%;
 }
@@ -120,35 +120,13 @@ body {
     margin: 25px 0 0 15px;
 }
 #head-forms {
-    position: relative;
-    top: 10px;
-    left: 35px;
+
 }
 
-#head-forms .quicklinks-button {
-    position: relative;
-    top: 7px;
-    left: 4px;
-}
-
-#header-site-search-without-quicklinks {
-    position: relative;
-    top: 20px;
-    left: 35px;
-}
-
-#header-site-search-with-quicklinks .ncstate-search-button,#header-site-search-without-quicklinks .ncstate-search-button {
-    position: relative;
-    top: 12px;
-}
-
-/* Search box and quicklinks menu styles */
+/* Search box styles */
 #region-header-right .form-text {
-    position: relative;
-    top: 5px;
     width: 180px;
     font-size: 10px;
-    width: 180px;
 }
 
 #region-header-right select {
@@ -158,6 +136,17 @@ body {
 /* hide the label and h2 tag for the search box */
 #region-header-right label, #region-header-right h2 {
     display: none;
+}
+
+#header-site-search .content {
+    position: relative;
+    top: 25px;
+    left: 15px;
+
+}
+.ncstate-search-button {
+    position: relative;
+    top: 7px;
 }
 
 /* RED HEADER REGION MENU - FOR WHEN THERE IS NO BRAND BAR */
@@ -172,11 +161,11 @@ body {
 }
 
 #region-noBrandBarDefaultTopMenu h2 {
-  font-family: Arial;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #CC0000;
-  float: left;
+    font-family: Arial;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #CC0000;
+    float: left;
 }
 
 #region-noBrandBarDefaultTopMenu a {
@@ -240,14 +229,14 @@ body {
 
 /*
  ***********************************************************************
- * MAIN MENU STYLES
+ * HORIZONTAL MAIN MENU STYLES
  ************************************************************************
 */
 
 #horizontal-menu-container {
-    margin: 4px 0 1px 0;
+    margin: 4px auto 1px auto;
     font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase; */
     font-weight: bold;
     height: 30px;
     overflow: hidden;
@@ -256,7 +245,6 @@ body {
 
 #horizontal-main-menu {
     background-color: #333333;
-    padding: 0;
 }
 #horizontal-main-menu ul.menu {
     padding: 10px 10px 10px 0;
@@ -278,7 +266,6 @@ body {
 #horizontal-main-menu li a {
     font-size: 13px;
     color: #FFF;
-    text-transform: uppercase;
     text-decoration: none;
     padding: 0 15px 0 15px;
 }
@@ -299,7 +286,7 @@ body {
 }
 
 /* set <li> position */
-#horizontal-main-menu li {
+#horizontal-main-menu ul.menu li {
     float: left;
     position: relative;
 }
@@ -432,30 +419,30 @@ body {
 }
 
 #comments .comment {
-  border-bottom: 1px solid #CCC;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 #comments .comment-unpublished {
-  font-style: italic !important;
+    font-style: italic !important;
 }
 #comments .links li a {
-  padding: 5px 10px;
-  background: #d7d7d7;
-  border: 1px solid #000;
-  color: #000 !important;
+    padding: 5px 10px;
+    background: #d7d7d7;
+    border: 1px solid #000;
+    color: #000 !important;
 }
 #comments .links li a:hover {
-  background: #51555c;
-  color: #FFFFFF;
-  border: 1px solid #CC0000;
+    background: #51555c;
+    color: #FFFFFF;
+    border: 1px solid #CC0000;
 }
 #comments .indented {
-  border-left: 7px solid #CCC;
-  padding-left: 1em;
+    border-left: 7px solid #CCC;
+    padding-left: 1em;
 }
 #comments .submitted {
-  font-style: italic;
+    font-style: italic;
 }
 
 /*----------------------------------------------------------------------------------------------------------
@@ -615,7 +602,7 @@ body {
 }
 
 #left-sub-menu .content .menu li a,#left-sub-menu .content .menu li a:visited
-    {
+{
     display: block;
     line-height: 1.3em;
     padding: 3px 0 3px 20px;
@@ -658,7 +645,6 @@ body {
 ----------------------------------------------------------------------------------------------------------*/
 #region-right-sidebar-container {
     line-height: 1.55em;
-    color: #000;
 }
 
 #region-right-sidebar a, #region-right-sidebar a:visited {
@@ -684,7 +670,6 @@ body {
 ----------------------------------------------------------------------------------------------------------*/
 #right-main-sidebar-content {
     margin: 0 10px 0px 0;
-    color: #FFF;
 }
 
 #right-main-sidebar-content .content {
@@ -692,32 +677,35 @@ body {
 }
 
 #region-right-sidebar-container .content .helper {
-  margin:0px;
-  /*background-image:url(../../images/base/sidebar-border.png); */
-  background-position:0 50%;
-  background-repeat:no-repeat repeat;
-  border: 1px solid #FF9897;
-  border-bottom: 0px;
-  padding:14px 20px 0px 20px;
+    margin:0px;
+    background-position:0 50%;
+    background-repeat:no-repeat repeat;
+    border: 1px solid #FF9897;
+    border-bottom: 0px;
+    padding:14px 20px 0px 10px;
 }
 #region-right-sidebar-container .block-bottom {
-  z-index: -100;
-  height: 32px;
-  margin:0px;
-  padding: 0px;
-  background-image:url(../../images/base/sidebar_border_bottom.png);
-  background-position:0 50%;
-  background-repeat:no-repeat;
-  position: relative;
-  bottom: 5px;
+    
+    height: 32px;
+    margin:0px;
+    padding: 0px;
+    background-image:url("../../images/base/sidebar_border_bottom.png");
+    background-position:0 50%;
+    background-repeat:no-repeat;
+    position: relative;
+    bottom: 5px;
 }
 
 #region-right-sidebar-container .block {
     margin: 0 0 5px 0 !important;
 }
+#region-right-sidebar-container .block .content {
+    font-size: 1.2em;
+}
 
 #right-main-sidebar-content .content p {
     line-height: 1.4em;
+    
 }
 
 #right-main-sidebar-content h2 {
@@ -737,11 +725,14 @@ body {
     display:inline-block;
     font-size:1.2em;
     letter-spacing:1px;
-    padding:5px 40px 5px 21px;
+    padding:5px 40px 5px 10px;
     text-transform:uppercase;
     width:auto;
 }
 
+#region-right-sidebar-container .block .content {
+    color: #666666;
+}
 
 /*----------------------------------------------------------------------------------------------------------
     RIGHT REGION MENU STYLES -- If a menu gets placed in the right-side-sidebar-container
@@ -757,16 +748,17 @@ body {
 }
 
 #region-right-sidebar-container .block-menu h2 {
-    display: block;
-    line-height: 1.3em;
-    padding: 10px 0 10px 20px;
-    text-transform: uppercase;
-    font-size: 1.3em;
-    font-weight: bold;
-    background-image: url("../../images/base/bullet_nav_active.gif");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: 10px 1.2em;
+    background-color:#CC0000;
+    background-image:url(../../images/base/sidebar_header_cut.png);
+    background-position:100% 100%;
+    background-repeat:no-repeat no-repeat;
+    color:#FFFFFF;
+    display:inline-block;
+    font-size:1.2em;
+    letter-spacing:1px;
+    padding:5px 40px 5px 10px;
+    text-transform:uppercase;
+    width:auto;
 }
 
 #region-right-sidebar-container .block-menu .content .menu ul,#region-right-sidebar-container .block-menu .content .menu li {
@@ -779,13 +771,13 @@ body {
     color: #cc0000;
     text-decoration: none;
     display: block;
-    padding: 4px 10px 4px 20px;
+    padding: 4px 10px 4px 5px;
 }
 
 /* first set of sub links underneath the main menu */
 #region-right-sidebar-container .block-menu .content .menu li ul li a {
 
-    padding: 5px 0 5px 30px;
+    padding: 5px 0 5px 15px;
     background-image: url("../../images/base/bullet_nav_lvl3.gif");
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -795,7 +787,7 @@ body {
 /* second set of sub links underneath the main menu */
 #region-right-sidebar-container .block-menu .content .menu li ul li ul li a {
 
-    padding: 5px 0 5px 40px;
+    padding: 5px 0 5px 25px;
     background-image: url("../../images/base/bullet_nav_lvl3.gif");
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -804,10 +796,6 @@ body {
 
 #region-right-sidebar-container .block-menu .content .menu .last {
     padding: 0 0 5px 0;
-}
-
-#region-right-sidebar-container .block .content {
-    color: #000;
 }
 
 /*----------------------------------------------------------------------------------------------------------
@@ -912,20 +900,62 @@ body {
     text-decoration: underline;
 }
 
-#footer-logo {
-    height: 45px;
-    background: url(../../images/base/footaddy_bg.gif) no-repeat;
-}
-
 #footer-address-contact-info {
-    text-align: right;
+    text-align: left;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.2em;
-    text-transform: uppercase;
-    font-size: 1.2em;
     color: #CC0000;
+    margin: 10px 0 25px 0;
 }
+
+#region-footer-container ul.social {
+float:right;
+width:148px;
+padding-right:21px;
+}
+
+#region-footer-container ul.social li {
+float:left;
+padding-left:5px;
+}
+
+#region-footer-container ul.social li a:focus {
+outline:1px dotted #000;
+}
+
+#region-footer-container ul.social li a.facebook {
+display:block;
+background:url(http://www.ncsu.edu/_core/images/layout_assets/home-sprite.jpg) no-repeat -839px -341px;
+width:32px;
+height:32px;
+text-indent:-9999px;
+}
+
+#region-footer-container ul.social li a.youtube {
+display:block;
+background:url(http://www.ncsu.edu/_core/images/layout_assets/home-sprite.jpg) no-repeat -839px -373px;
+width:32px;
+height:32px;
+text-indent:-9999px;
+}
+
+#region-footer-container ul.social li a.twitter {
+display:block;
+background:url(http://www.ncsu.edu/_core/images/layout_assets/home-sprite.jpg) no-repeat -870px -341px;
+width:32px;
+height:32px;
+text-indent:-9999px;
+}
+
+#region-footer-container ul.social li a.oncampus {
+display:block;
+background:url(http://www.ncsu.edu/_core/images/layout_assets/home-sprite.jpg) no-repeat -870px -373px;
+width:32px;
+height:32px;
+text-indent:-9999px;
+}
+
 
 /* make the default tables created by Drupal expand to the width of the container they appear in */
 table.sticky-enabled, table.views-table {
@@ -1001,7 +1031,7 @@ div.meta {
 
 /*
  * style for /photos page (lists all photo galleries, with thumbnail and title of each)
- */
+*/
 
 .ncstateofficial-photo-gallery-feature-view table {
     border-collapse:separate;

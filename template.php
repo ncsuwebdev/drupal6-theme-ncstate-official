@@ -27,18 +27,20 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
     	'select_brand_bar' 				=> 0,
     	'anniversary_header'			=> 0,
     	'show_belltower' 				=> 1,
-		  'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
-  		'site_title_vertical_offset'    => '0px',
-		  'site_title_horizontal_offset'  => '0px',
-		  'show_breadcrumbs'      		=> 1,
-		  'breadcrumb_separator'		 	=> ' > ',
-		  'show_quicklinks'				=> 1,
-      'show_post_info_on_search' => 0,
-		  'show_default_horizontal_menu'	=> 0,
-      'slider_transition_time'  => 5000,
-		  'copyright_information' 		=> '© ' . date('Y', time()),
-		  'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
-  	);
+        'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
+        'site_title_vertical_offset'    => '0px',
+        'site_title_horizontal_offset'  => '0px',
+        'show_breadcrumbs'      		=> 1,
+        'breadcrumb_separator'		 	=> ' > ',
+        'show_post_info_on_search' => 0,
+        'show_default_horizontal_menu'	=> 0,
+        'slider_transition_time'  => 5000,
+        'copyright_information' 		=> '© ' . date('Y', time()),
+        'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
+        'social_facebook_url'            => 'http://facebook.com/ncstate',
+        'social_youtube_url'            =>  'http://youtube.com/ncstate',
+        'social_twitter_url'            =>  'http://twitter.com/ncstate',
+    );
 
   // Get default theme settings.
   $settings = theme_get_settings($theme_key);
@@ -161,47 +163,10 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 		$bellTowerWidth = 7;
 	}
 
-	// detect if the quicklinks and search bar are displayed, and set the header region widths accordingly
-	if (theme_get_setting('show_quicklinks') || $vars['header_search']) {
+	// detect if the search bar displayed, and set the header region widths accordingly
+	if ($vars['header_search']) {
 		$vars['page']['region-widths']['show-right-header-region'] = true;
 		$vars['page']['region-widths']['region-header-left-width'] = 62 - $bellTowerWidth;
-
-		// set the quicklinks code here
-		$vars['page']['region-widths']['quicklinks_html'] = "
-			<form method=\"post\" id=\"quicklinks_form\" name=\"quicklinks_form\" action=\"javascript:MM_jumpMenuGo('quicklinks','parent',0)\">
-								<table cellpadding=\"0\" cellspacing=\"0\" summary=\"This table is used for the visual layout of the QuickLinks navigation feature. The QuickLinks navigation feature allows you to use a combo-box to select a page and a submit button to jump to that page. This feature requires a browser that supports JavaScript.\">
-									<tr>
-										<td>
-				                            <a class=\"access\" name=\"quicklinks\" aria-label=\"NC State University Quick Links Navgiation\">NC State Quick Links</a>
-				                            <select id=\"quicklinks\" name=\"quicklinks\" title=\"Select a page to jump to (requires a browser that supports JavaScript)\">
-				                                <option selected=\"selected\">University Quicklinks...</option>
-				                                <option value=\"http://ncsu.collegestoreonline.com/\">Bookstore</option>
-				                                <option value=\"http://www.ncsu.edu/registrar/calendars\">Calendar (Academic)</option>
-				                                <option value=\"http://www.ncsu.edu/about-nc-state/university-administration/planning-leadership\">Campus Administration</option>
-				                                <option value=\"http://campuspolice.ehps.ncsu.edu/index.php\">Campus Police</option>
-				                                <option value=\"http://www.fis.ncsu.edu/cashier\">Cashier's Office</option>
-				                                <option value=\"http://www.ncsu.edu/about-nc-state/centennial-campus/index.php\">Centennial Campus</option>
-                                                                <option value=\"http://www.ncsu.edu/academics/departments-a-z/index.php\">Colleges &amp; Academic Departments</option>
-                                                                <option value=\"http://www.ncsudining.com/dining/index.html\">Dining</option>
-                                                                <option value=\"http://distance.ncsu.edu\">Distance Education</option>
-                                                                <option value=\"http://www7.acs.ncsu.edu/financial_aid\">Financial Aid &amp; Scholarships</option>
-                                                                <option value=\"http://www.ncsu.edu/grad\">Graduate School</option>
-                                                                <option value=\"http://healthcenter.ncsu.edu\">Health Services</option>
-                                                                <option value=\"http://www.ncsu.edu/housing\">Housing</option>
-                                                                <option value=\"http://oia.ncsu.edu\">International</option>
-                                                                <option value=\"http://m.ncsu.edu\">Mobile Website</option>
-                                                                <option value=\"http://www.fis.ncsu.edu/rm/budget_central\">NC State Budget Central</option>
-                                                                <option value=\"http://oit.ncsu.edu\">Office of Information Technology</option>
-                                                                <option value=\"http://www.ncsu.edu/registrar\">Registration &amp; Records</option>
-                                                                <option value=\"http://admissions.ncsu.edu\">Undergraduate Admissions</option>
-                                                                <option value=\"http://gmail.ncsu.edu\">Gmail Web Access</option>
-                                                                <option value=\"https://wolfware.ncsu.edu\">Wolfware</option>
-				                            </select>
-										</td>
-										<td><input type=\"image\" src=\"" . base_path().path_to_theme() . "/images/base/head_btn_qlinks.gif\" class=\"btn_qlinks quicklinks-button\" alt=\"Jump to the page selected from the Quicklinks combo-box\" title=\"Jump to the page selected from the Quicklinks combo-box\" /></td>
-									</tr>
-								</table>
-							</form>";
 
 	} else {
 		$vars['page']['region-widths']['show-right-header-region'] = false;
@@ -297,35 +262,20 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 			</ul>';
 	}
 
-	// check for main horizontal menu. If configured by user, display it. If not configured by user, check the theme setting to decide if to show the default menu.
-	if (theme_get_setting('show_default_horizontal_menu') && !$vars['horizontal_main_menu'] && !$forceHideLeftRightRegions) {
-		$vars['horizontal_main_menu'] = '
-			<ul class="menu">
-				<li class="collapsed first"><a href="http://www.ncsu.edu/current-students" title="">Current Students</a></li>
-				<li class="leaf"><a href="http://www.ncsu.edu/future-students" title="">Future Students</a></li>
-				<li class="leaf"><a href="http://www.ncsu.edu/faculty-and-staff" title="">Faculty and Staff</a></li>
-				<li class="leaf"><a href="http://www.ncsu.edu/parents" title="">Parents and Family</a></li>
-				<li class="leaf"><a href="http://www.ncsu.edu/alumni" title="">Alumni</a></li>
-				<li class="leaf last"><a href="http://www.ncsu.edu/partners" title="">Partners</a></li>
-			</ul>';
-	} else {
-		$vars['horizontal_main_menu'] = $vars['horizontal_main_menu'];
-	}
-
 	// check for footer horizontal menu. If configured by user, display it. If not configured by user, display default menu.
 	if(!$vars['footer_menu']) {
 		$vars['footer_menu'] = '
-			<ul>
-	            <li><a href="http://www.ncsu.edu/emergency-information/index.php">Emergency Information</a></li>
-	            <li><a href="http://www.ncsu.edu/privacy/index.php" title="North Carolina State University Privacy Policy">Privacy</a></li>
-	            <li><a href="http://www.ncsu.edu/copyright/index.php" title="North Carolina State University copyright policy">Copyright</a></li>
-	            <li><a href="http://ncsu.edu/it/access/legal/webreg.php" title="North Carolina State University website accessibility information">Accessibility</a></li>
-	            <li><a href="http://www.ncsu.edu/diversity/" title="Diversity at NC State">Diversity</a></li>
-	            <li><a href="http://policies.ncsu.edu" title="North Carolina State University Policies">University Policies</a></li>
-	            <li><a href="http://www.ncsu.edu/about-site/index.php" title="About the North Carolina State University website">About the Site</a></li>
-	            <li><a href="http://www7.acs.ncsu.edu/hr/job_applicants/" title="Jobs at North Carolina State University">Jobs</a></li>
-	            <li class="last"><a href="http://www.ncsu.edu/contact-us/index.php" title="Contact North Carolina State University">Contact Us</a></li>
-	        </ul>';
+			<ul aria-label="Services Navigation" role="navigation">
+                            <li><a href="http://www.ncsu.edu/emergency-information/">Emergency Info</a></li>
+                            <li><a href="http://www.ncsu.edu/privacy/" title="North Carolina State University Privacy Policy">Privacy</a></li>
+                            <li><a href="http://www.ncsu.edu/copyright/" title="North Carolina State University copyright policy">Copyright</a></li>
+                            <li><a class="track" href="http://oit.ncsu.edu/itaccess/legislation-and-policies" title="North Carolina State University website accessibility information">Accessibility</a></li>
+                            <li><a class="track" href="http://oied.ncsu.edu/oied/">Diversity</a></li>
+                            <li><a class="track" href="http://policies.ncsu.edu/" title="North Carolina State University Policies">University Policies</a></li>
+                            <li><a href="http://www.ncsu.edu/about-site/" title="About the North Carolina State University website">About the Site</a></li>
+                            <li><a class="track" href="https://jobs.ncsu.edu/" title="Jobs at North Carolina State University">Jobs</a></li>
+                            <li><a href="http://www.ncsu.edu/contact-us/" title="Contact North Carolina State University">Contact NC State</a></li>
+                        </ul>';
 	} else {
 		$vars['footer_menu'] = $vars['footer_menu'];
 	}

@@ -52,7 +52,7 @@ jQuery(document).ready(function() {
 					.attr('name', 'search')
 					.attr('alt', 'search button')
 					.attr('title', 'search this site')
-					.attr('src', base_path + theme_path + '/images/base/head_btn_search.gif');
+					.attr('src', base_path + theme_path + '/images/base/search-arrow.jpg');
 		$input.insertBefore($searchButton);
 
 		$searchButton.remove();
@@ -104,6 +104,5 @@ jQuery(document).ready(function() {
     $('#horizontal-menu-container li ul').hide();
 
   }
-
-
+  
 });

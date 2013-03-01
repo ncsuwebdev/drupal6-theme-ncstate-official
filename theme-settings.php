@@ -7,17 +7,19 @@ function ncstate_official_settings($saved_settings) {
     	'select_brand_bar' 				=> 0,
     	'anniversary_header'			=> 0,
     	'show_belltower' 				=> 1,
-  		'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
-  		'site_title_vertical_offset'    => '0px',
-  		'site_title_horizontal_offset'  => '0px',
-  		'show_breadcrumbs'      		=> 1,
-  		'breadcrumb_separator'		 	=> ' > ',
-  		'show_quicklinks'				=> 1,
-      'show_post_info_on_search' => 0,
-      'show_default_horizontal_menu'  => 0,
-      'slider_transition_time'  => 5000,
-  		'copyright_information' 		=> '© ' . date('Y', time()),
-  		'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
+        'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
+        'site_title_vertical_offset'    => '0px',
+        'site_title_horizontal_offset'  => '0px',
+        'show_breadcrumbs'      		=> 1,
+        'breadcrumb_separator'		 	=> ' > ',
+        'show_post_info_on_search' => 0,
+        'show_default_horizontal_menu'  => 0,
+        'slider_transition_time'  => 5000,
+        'copyright_information' 		=> '© ' . date('Y', time()),
+        'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
+        'social_facebook_url'            => 'http://facebook.com/ncstate',
+        'social_youtube_url'            =>  'http://youtube.com/ncstate',
+        'social_twitter_url'            =>  'http://twitter.com/ncstate',
   	);
 
 	// Merge the saved variables and their default values
@@ -181,7 +183,40 @@ function ncstate_official_settings($saved_settings) {
     '#maxlength' => 128,
     '#required' => TRUE,
   );
-
+  
+  $form['social_facebook_url'] = array(
+    '#title' => 'Facebook page URL',
+    '#description' => t('Change this to your own facebook URL, or leave as the default (http://facebook.com/ncstate)'),
+    '#type' => 'textfield',
+    '#default_value' => $settings['social_facebook_url'],
+    '#size' => 60,
+    '#maxlength' => 128,
+    '#required' => TRUE,
+  );
+  
+  
+  $form['social_youtube_url'] = array(
+    '#title' => 'Youtube Account URL',
+    '#description' => t('Change this to your own youtube channel URL, or leave as the default (http://youtube.com/ncstate)'),
+    '#type' => 'textfield',
+    '#default_value' => $settings['social_youtube_url'],
+    '#size' => 60,
+    '#maxlength' => 128,
+    '#required' => TRUE,
+  );
+  
+  
+  $form['social_twitter_url'] = array(
+    '#title' => 'Twitter Account URL',
+    '#description' => t('Change this to your own twitter account URL, or leave as the default (http://twitter.com/ncstate)'),
+    '#type' => 'textfield',
+    '#default_value' => $settings['social_twitter_url'],
+    '#size' => 60,
+    '#maxlength' => 128,
+    '#required' => TRUE,
+  );
+  
+  
   // Return the additional form widgets
   return $form;
 

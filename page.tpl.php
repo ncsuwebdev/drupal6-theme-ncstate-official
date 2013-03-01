@@ -23,7 +23,7 @@
         <!-- End brandbar region -->
     <?php endif; ?>
 		<div id="page-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
-			<!-- start header container region with site title, quicklinks, search box etc -->
+			<!-- start header container region with site title, search box etc -->
 			<div id="region-header-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
 				<div id="head">
 		            <?php if(theme_get_setting('select_brand_bar') == 0): ?>
@@ -45,36 +45,30 @@
 				        </a>
 				    </div>
 				    <?php if ($page['region-widths']['show-right-header-region']): ?>
-					    <div id="region-header-right" class="grid_28">
-					        <?php if (theme_get_setting('show_quicklinks')): ?>
-						        <h6 class="access screen-reader-text">NC State Quicklinks Navigation &amp; Search:</h6>
-								<noscript>
-									<p class="noscript">The QuickLinks menu below will not function without JavaScript. To use them, please enable JavaScript in your web client.</p>
-								</noscript>
-								<div id="head-forms">
-									<?php echo $page['region-widths']['quicklinks_html']; ?>
-								<?php endif; ?>
-								<?php if(header_search): ?>
-									<a class="access" name="site-search">Search this site</a>    	
-                                                                        <div role="search" aria-label="Search this website" id="header-site-search<?php if (theme_get_setting('show_quicklinks')): echo '-with-quicklinks'; else: echo '-without-quicklinks'; endif; ?>">
-										<?php print $header_search; ?>
-									</div>
-								<?php endif; ?>
-							</div>
-						</div>
-					<?php endif; ?>
+                                        <div id="region-header-right" class="grid_28">
+                                                    <?php if($header_search): ?>
+                                                            <a class="access" name="site-search">Search this site</a>    	
+                                                            <div role="search" aria-label="Search this website" id="header-site-search">
+                                                                    <?php print $header_search; ?>
+                                                            </div>
+                                                    <?php endif; ?>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
 				</div>
 			</div>
 			<!--  End header container region -->
 			<!--  START Horizontal Menu Region -->
 			<?php if($horizontal_main_menu): ?>
-				<div id="horizontal-menu-container" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>">
+				<div id="horizontal-menu-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
+                                    <div id="horizontal-menu-grid" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>">
 					<?php if($horizontal_main_menu): ?>
 						<div id="horizontal-main-menu">
 							<a class="access" name="horizontal-main-menu">Horizontal Main Menu</a>
 							<?php print $horizontal_main_menu; ?>
 						</div>
 					<?php endif; ?>
+                                        </div>
 				</div>
 			<?php endif; ?>
 			<!--  End horizontal menu -->
@@ -197,10 +191,17 @@
 				<div id="footer-horizontal-menu" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>" role="contentinfo" aria-label="Footer">
 					<?php print $footer_menu; ?>
 				</div>
-				<div id="footer-logo" class="grid_22"></div>
-				<div id="footer-address-contact-info" class="grid_68">
+                                <div id="footer-address-contact-info" class="grid_68">
 					<?php echo theme_get_setting('footer_contact_information'); ?>
 				</div>
+                                <div id="social" class="grid_22">
+                                    <ul class="social">
+                                        <li><a href="<?php echo theme_get_setting('social_facebook_url'); ?>" class="facebook track" title="Like us on Facebook">Facebook</a></li>
+                                        <li><a href="<?php echo theme_get_setting('social_youtube_url'); ?>" class="youtube track" title="See us on YouTube">YouTube</a></li>
+                                        <li><a href="<?php echo theme_get_setting('social_twitter_url'); ?>" class="twitter track" title="Follow us on Twitter">Twitter</a></li>
+                                        <li><a href="http://oncampus.ncsu.edu" class="oncampus track" title="NC State on onCampus">OnCampus</a></li>
+                                    </ul>
+                                </div>
 			</div>
 		</div>
 	<?php print $closure ?>
