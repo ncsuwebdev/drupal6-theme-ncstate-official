@@ -194,42 +194,63 @@
                             <a class="access" name="right-sidebar">Right Side Bar</a>    
                             <div id="region-right-sidebar-container" class="container_<?php echo $page['region-widths']['right-region-width']; ?>">
                                     <div id="region-right-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-                                            <?php if($right_main_sidebar): ?>
-                                                    <div id="right-main-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
-                                                        <div id="right-main-sidebar-content">
-                                                                <?php print $right_main_sidebar; ?>
-                                                        </div>
+                                        <?php if($right_top_sidebar): ?>
+                                                <div id="right-top-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                                    <div id="right-top-sidebar-content">
+                                                            <?php print $right_top_sidebar; ?>
                                                     </div>
-                                            <?php endif; ?>	
-						 			</div>
-								</div>
-							<?php endif; ?>
-						</div>
-					</div>
-					<!-- end grid for center and right side of the layout -->
-				</div>
-			</div>
-			<!-- End 3 column layout area -->
-			<!-- Start footer area (everything underneath the main content area) -->
-			<div id="region-footer-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
-				<div id="footer-separator" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>"></div>
-				<a class="access" name="footer">Footer</a>    
-				<div id="footer-horizontal-menu" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>" role="contentinfo" aria-label="Footer">
-					<?php print $footer_menu; ?>
-				</div>
-                                <div id="footer-address-contact-info" class="grid_68">
-					<?php echo theme_get_setting('footer_contact_information'); ?>
-				</div>
-                                <div id="social" class="grid_22">
-                                    <ul class="social">
-                                        <li><a href="<?php echo theme_get_setting('social_facebook_url'); ?>" class="facebook track" title="Like us on Facebook">Facebook</a></li>
-                                        <li><a href="<?php echo theme_get_setting('social_youtube_url'); ?>" class="youtube track" title="See us on YouTube">YouTube</a></li>
-                                        <li><a href="<?php echo theme_get_setting('social_twitter_url'); ?>" class="twitter track" title="Follow us on Twitter">Twitter</a></li>
-                                        <li><a href="http://oncampus.ncsu.edu" class="oncampus track" title="NC State on onCampus">OnCampus</a></li>
-                                    </ul>
-                                </div>
-			</div>
-		</div>
-	<?php print $closure ?>
-	</body>
+                                                </div>
+                                        <?php endif; ?>
+                                        <?php if($right_main_sidebar): ?>
+                                                <div id="right-main-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                                    <div id="right-main-sidebar-content">
+                                                            <?php print $right_main_sidebar; ?>
+                                                    </div>
+                                                </div>
+                                        <?php endif; ?>
+                                        <?php if($right_main_blank_sidebar): ?>
+                                                <div id="right-main-blank-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                                    <div id="right-main-blank-sidebar-content">
+                                                            <?php print $right_main_blank_sidebar; ?>
+                                                    </div>
+                                                </div>
+                                        <?php endif; ?>
+                                        <?php if($right_bottom_sidebar): ?>
+                                                <div id="right-bottom-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
+                                                    <div id="right-bottom-sidebar-content">
+                                                            <?php print $right_bottom_sidebar; ?>
+                                                    </div>
+                                                </div>
+                                        <?php endif; ?>
+                                    </div>
+                            </div>
+                    <?php endif; ?>
+                    </div>
+            </div>
+            <!-- end grid for center and right side of the layout -->
+    </div>
+</div>
+<!-- End 3 column layout area -->
+            <!-- Start footer area (everything underneath the main content area) -->
+            <div id="region-footer-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
+                    <div id="footer-separator" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>"></div>
+                    <a class="access" name="footer">Footer</a>    
+                    <div id="footer-horizontal-menu" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>" role="contentinfo" aria-label="Footer">
+                            <?php print $footer_menu; ?>
+                    </div>
+                    <div id="footer-address-contact-info" class="grid_68">
+                            <?php echo theme_get_setting('footer_contact_information'); ?>
+                    </div>
+                    <div id="social" class="grid_22">
+                        <ul class="social">
+                            <li><a href="<?php echo theme_get_setting('social_facebook_url'); ?>" class="facebook track" title="Like us on Facebook">Facebook</a></li>
+                            <li><a href="<?php echo theme_get_setting('social_youtube_url'); ?>" class="youtube track" title="See us on YouTube">YouTube</a></li>
+                            <li><a href="<?php echo theme_get_setting('social_twitter_url'); ?>" class="twitter track" title="Follow us on Twitter">Twitter</a></li>
+                            <li><a href="http://oncampus.ncsu.edu" class="oncampus track" title="NC State on onCampus">OnCampus</a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+        <?php print $closure ?>
+    </body>
 </html>

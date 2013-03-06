@@ -647,21 +647,20 @@ body {
 #region-right-sidebar {
     margin: 4px 0 0 0;
     overflow: hidden;
-    /*background-color: #E5E3D6;*/
 }
 
-#right-main-sidebar {
+#right-main-sidebar, #right-bottom-sidebar {
     margin: 5px;
 }
 
 /*----------------------------------------------------------------------------------------------------------
     RIGHT REGION CONTENT STYLES
 ----------------------------------------------------------------------------------------------------------*/
-#right-main-sidebar-content {
+#right-main-sidebar-content, #right-bottom-sidebar-content {
     margin: 0 10px 0px 0;
 }
 
-#right-main-sidebar-content .content {
+#right-main-sidebar-content .content, #right-bottom-sidebar-content .content {
     padding: 0px;
 }
 
@@ -672,7 +671,9 @@ body {
     border: 1px solid #FF9897;
     border-bottom: 0px;
     padding:14px 20px 0px 10px;
+    overflow: hidden;
 }
+
 #region-right-sidebar-container .block-bottom {
     
     height: 32px;
@@ -689,23 +690,16 @@ body {
     margin: 0 0 5px 0 !important;
 }
 #region-right-sidebar-container .block .content {
-    font-size: 12px;
+    font-size: 12px; 
+    color: #666666;
 }
 
-#right-main-sidebar-content .content p {
+#right-main-sidebar-content .content p, #right-bottom-sidebar-content .content p {
     line-height: 1.4em;
     
 }
 
-#right-main-sidebar-content h2 {
-    /*
-    display: block;
-    line-height: 1.3em;
-    padding: 5px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.6em;
-    font-weight: normal;
-    */
+#right-main-sidebar-content h2, #right-bottom-sidebar-content h2 {
     background-color:#CC0000;
     background-image:url(../../images/base/sidebar_header_cut.png);
     background-position:100% 100%;
@@ -719,8 +713,8 @@ body {
     width:auto;
 }
 
-#region-right-sidebar-container .block .content {
-    color: #666666;
+#right-main-sidebar-content img, #right-bottom-sidebar-content img {
+    max-width: 215px;
 }
 
 /*----------------------------------------------------------------------------------------------------------
@@ -785,6 +779,39 @@ body {
 
 #region-right-sidebar-container .block-menu .content .menu .last {
     padding: 0 0 5px 0;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------
+    RIGHT SIDE BAR NO STYLE BLOCK REGIONS
+----------------------------------------------------------------------------------------------------------*/
+
+#right-top-sidebar-content, #right-main-blank-sidebar-content {
+    margin: 0;
+}
+
+#right-top-sidebar-content .content, #right-main-blank-sidebar-content {
+    padding: 0px;
+}
+
+#right-top-sidebar-content .content .helper, #right-main-blank-sidebar-content .content .helper {
+    margin:0;
+    background: none;
+    padding:0;
+    border: none;
+}
+#region-right-sidebar-container #right-top-sidebar-content .block-bottom, #region-right-sidebar-container #right-main-blank-sidebar-content .block-bottom {
+    display: none;
+}
+
+#right-top-sidebar-content .content p, #right-main-blank-sidebar-content .content p {
+    line-height: 1.4em;
+    
+}
+
+#right-top-sidebar-content h2, #right-main-blank-sidebar-content h2 {
+    background: none;
+    color:#CC0000;
 }
 
 /*----------------------------------------------------------------------------------------------------------
