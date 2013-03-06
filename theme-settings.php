@@ -4,71 +4,29 @@
 function ncstate_official_settings($saved_settings) {
 
 	$defaults = array(
-    	'select_brand_bar' 				=> 0,
-    	'anniversary_header'			=> 0,
-    	'show_belltower' 				=> 1,
-        'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
-        'site_title_vertical_offset'    => '0px',
-        'site_title_horizontal_offset'  => '0px',
-        'show_breadcrumbs'      		=> 1,
-        'breadcrumb_separator'		 	=> ' > ',
-        'show_post_info_on_search' => 0,
-        'show_default_horizontal_menu'  => 0,
-        'slider_transition_time'  => 5000,
-        'copyright_information' 		=> '© ' . date('Y', time()),
-        'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
-        'social_facebook_url'            => 'http://facebook.com/ncstate',
-        'social_youtube_url'            =>  'http://youtube.com/ncstate',
-        'social_twitter_url'            =>  'http://twitter.com/ncstate',
+            'title_image_url'      		=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
+            'site_title_vertical_offset'        => '0px',
+            'site_title_horizontal_offset'      => '0px',
+            'show_breadcrumbs'                  => 1,
+            'breadcrumb_separator'		=> ' > ',
+            'show_post_info_on_search'          => 0,
+            'slider_transition_time'            => 5000,
+            'copyright_information'             => '© ' . date('Y', time()),
+            'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
+            'social_facebook_url'               => 'http://facebook.com/ncstate',
+            'social_youtube_url'                => 'http://youtube.com/ncstate',
+            'social_twitter_url'                => 'http://twitter.com/ncstate',
   	);
 
 	// Merge the saved variables and their default values
   $settings = array_merge($defaults, $saved_settings);
 
-  // Create the form widgets using Forms API
-  $form['select_brand_bar'] = array(
-    '#type' => 'select',
-    '#title' => 'Select Brand Bar (Utility Bar) to use at the top of the theme',
-    '#default_value' => $settings['select_brand_bar'],
-	'#options' => array(
-			0 => 'None - Use Default Top Menu',
-  			1 => 'Red text on White',
-	  		2 => 'Red text on White (centered)',
-	      	3 => 'White text on Red',
-	      	4 => 'White text on Red (centered)',
-	      	5 => 'White text on Black',
-	      	6 => 'White text on Black - Centered',
-	      	7 => 'Black text on White',
-	      	8 => 'Black text on White - Centered',
-	),
-  );
-
-  $form['anniversary_header'] = array(
-    '#type' => 'select',
-     '#title' => 'Show Anniversary Logo',
-    '#default_value' => $settings['anniversary_header'],
-  	'#options' => array(
-      0 => 'False',
-      1 => 'True',
-    ),
-  );
-
-  $form['show_belltower'] = array(
-    '#type' => 'select',
-     '#title' => 'Show Belltower in header',
-    '#default_value' => $settings['show_belltower'],
-  	'#options' => array(
-      0 => 'False',
-      1 => 'True',
-    ),
-  );
-
   $form['title_image_url'] = array(
     '#title' => 'Site Title Image Full URL',
-    '#description' => t('Transparent PNG / GIF that will function as the title of your site. OIT Design (http://oitdesign.ncsu.edu) can create this correctly for you.'),
+    '#description' => t('Transparent PNG / GIF title of your site. OIT Design (http://oitdesign.ncsu.edu) can create this correctly for you. Must include http:// or https://'),
     '#type' => 'textfield',
     '#default_value' => $settings['title_image_url'],
-    '#size' => 60,
+    '#size' => 120,
     '#maxlength' => 255,
     '#required' => TRUE,
   );
@@ -93,17 +51,6 @@ function ncstate_official_settings($saved_settings) {
     '#required' => TRUE,
   );
 
-  $form['show_default_horizontal_menu'] = array(
-    '#type' => 'select',
-     '#title' => 'Show Default Horizontal Menu?',
-    '#default_value' => $settings['show_default_horizontal_menu'],
-    '#description' => t('Set whether to show the default horiztonal menu. This is only used if you have not set a block to display in that region via the block administration page.'),
-    '#options' => array(
-      0 => 'False',
-      1 => 'True',
-    ),
-  );
-
   $form['show_breadcrumbs'] = array(
     '#title' => 'Show Breadcrumbs when available',
     '#type' => 'select',
@@ -122,16 +69,6 @@ function ncstate_official_settings($saved_settings) {
     '#size' => 15,
     '#maxlength' => 10,
     '#required' => FALSE,
-  );
-
-  $form['show_quicklinks'] = array(
-    '#title' => 'Show Quicklinks menu in header',
-    '#type' => 'select',
-    '#default_value' => $settings['show_quicklinks'],
-    '#options' => array(
-      0 => 'False',
-      1 => 'True',
-    ),
   );
 
   $form['show_post_info_on_search'] = array(

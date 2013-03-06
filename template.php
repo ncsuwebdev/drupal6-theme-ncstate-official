@@ -24,22 +24,18 @@ if (is_null(theme_get_setting('ncstate_official_select_brand_bar'))) {
    */
 
   $defaults = array(
-    	'select_brand_bar' 				=> 0,
-    	'anniversary_header'			=> 0,
-    	'show_belltower' 				=> 1,
-        'title_image_url'      			=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
+        'title_image_url'      		=> 'http://drupal.ncsu.edu/resources/theme-resources/ncstate_official/site_title/site_title_image.png',
         'site_title_vertical_offset'    => '0px',
         'site_title_horizontal_offset'  => '0px',
-        'show_breadcrumbs'      		=> 1,
-        'breadcrumb_separator'		 	=> ' > ',
-        'show_post_info_on_search' => 0,
-        'show_default_horizontal_menu'	=> 0,
-        'slider_transition_time'  => 5000,
-        'copyright_information' 		=> '© ' . date('Y', time()),
+        'show_breadcrumbs'      	=> 1,
+        'breadcrumb_separator'		=> ' > ',
+        'show_post_info_on_search'      => 0,
+        'slider_transition_time'        => 5000,
+        'copyright_information' 	=> '© ' . date('Y', time()),
         'footer_contact_information'	=> 'North Carolina State University Raleigh, NC 27695 Phone: (919) 515-2011',
-        'social_facebook_url'            => 'http://facebook.com/ncstate',
-        'social_youtube_url'            =>  'http://youtube.com/ncstate',
-        'social_twitter_url'            =>  'http://twitter.com/ncstate',
+        'social_facebook_url'           => 'http://facebook.com/ncstate',
+        'social_youtube_url'            => 'http://youtube.com/ncstate',
+        'social_twitter_url'            => 'http://twitter.com/ncstate',
     );
 
   // Get default theme settings.
@@ -177,90 +173,6 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 
 	//set the title image appropriately based on how much room there is to use: number of grids * 10 (pixels), minus 30 (pixels) for space
 	$vars['page']['region-widths']['region-header-title-width'] = ($vars['page']['region-widths']['region-header-left-width'] * 10) - 30;
-
-	// detect which brand bar is selected, and store in page variable for display
-	switch(theme_get_setting('select_brand_bar')) {
-		case 1:
-			// red text on white
-			$vars['page']['brand-bar-code'] = '<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /><iframe title="I-Frame showing NC State Branding Bar" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=red_on_white&amp;inurl=&amp;center=no" scrolling="no">Your browser does not support inline frames or is currently configured  not to display inline frames.<br />Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.</iframe>';
-			break;
-		case 2:
-			// red text on white centered
-			$vars['page']['brand-bar-code'] = '<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /><iframe title="I-Frame showing NC State Branding Bar" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=red_on_white&amp;inurl=&amp;center=yes" scrolling="no">Your browser does not support inline frames or is currently configured  not to display inline frames.<br />Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.</iframe>';
-			break;
-		case 3:
-			// white text on red
-			$vars['page']['brand-bar-code'] = '<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /><iframe title="I-Frame showing NC State Branding Bar" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=red&amp;inurl=&amp;center=yes" scrolling="no">Your browser does not support inline frames or is currently configured  not to display inline frames.<br />Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.</iframe>';
-			break;
-		case 4:
-			// white text on red centered
-			$vars['page']['brand-bar-code'] = '<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /><iframe title="I-Frame showing NC State Branding Bar" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=red&amp;inurl=&amp;center=yes" scrolling="no">Your browser does not support inline frames or is currently configured  not to display inline frames.<br />Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.</iframe>';
-			break;
-		case 5:
-			// white text on black
-			$vars['page']['brand-bar-code'] = '<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /><iframe title="I-Frame showing NC State Branding Bar" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=black&amp;inurl=&amp;center=no" scrolling="no">Your browser does not support inline frames or is currently configured  not to display inline frames.<br />Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.</iframe>';
-			break;
-		case 6:
-			// white text on black centered
-			$vars['page']['brand-bar-code'] = '<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /><iframe title="I-Frame showing NC State Branding Bar" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=black&amp;inurl=&amp;center=yes" scrolling="no">Your browser does not support inline frames or is currently configured  not to display inline frames.<br />Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.</iframe>';
-			break;
-		case 7:
-			// black text on white
-			$vars['page']['brand-bar-code'] = '<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /><iframe title="I-Frame showing NC State Branding Bar" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=black_on_white&amp;inurl=&amp;center=no" scrolling="no">Your browser does not support inline frames or is currently configured  not to display inline frames.<br />Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.</iframe>';
-			break;
-		case 8:
-			// black text on white centered
-			$vars['page']['brand-bar-code'] = '<link rel="stylesheet" type="text/css" href="http://www.ncsu.edu/brand/utility-bar/iframe/css/utility_bar_iframe.css" media="screen" /><iframe title="I-Frame showing NC State Branding Bar" name="ncsu_branding_bar" id="ncsu_branding_bar" frameborder="0" src="http://www.ncsu.edu/brand/utility-bar/iframe/index.php?color=black_on_white&amp;inurl=&amp;center=yes" scrolling="no">Your browser does not support inline frames or is currently configured  not to display inline frames.<br />Visit <a href="http://ncsu.edu/">http://www.ncsu.edu</a>.</iframe>';
-			break;
-	}
-
-	// menu that sits on top of the red header region, if there is no brand bar displayed
-
-	if(theme_get_setting('select_brand_bar') == 0) {
-
-
-		if(theme_get_setting('anniversary_header')) {
-
-			$imageText = '125-anniversary-stripbrick-redonwhite.gif';
-			$image125 = '125-anniversary-stripbrick125-redonwhite.gif';
-
-			$logoLink = '<a class="anniversaryBrick" href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/' . $imageText .'"></a>
-						<a class="anniversaryBrick" href="http://125.ncsu.edu" title="125th Anniversary Website for North Carolina State University"><img class="ncsu-text" alt="125.ncsu.edu" src="' . base_path().path_to_theme() . '/images/base/' . $image125 .'"></a>';
-		} else {
-
-			$imageText = 'ncsu_text_beside_belltower.png';
-			$logoLink = '<a href="http://www.ncsu.edu" title="North Carolina State University"><img class="ncsu-text" alt="North Carolina State University" src="' . base_path().path_to_theme() . '/images/base/' . $imageText .'"></a>';
-
-		}
-
-		$vars['page']['noBrandBarDefaultTopMenu'] = '
-			<h2 class="brickHeaderLogo" title="North Carolina State University">
-				' . $logoLink . '
-			</h2>
-			<ul id="noBrandBarDefaultTopMenuNav">
-				<li>
-					<a href="http://www.ncsu.edu/directory/" title="Find People at North Carolina State University">Find People</a>
-				</li>
-				<li>
-					<a href="http://www.lib.ncsu.edu/" title="North Carolina State University Libraries">Libraries</a>
-				</li>
-				<li>
-					<a href="http://news.ncsu.edu/" title="Latest North Carolina State University News">News</a>
-				</li>
-				<li>
-					<a href="http://calendar.activedatax.com/ncstate/" title="North Carolina State University Events Calendar">Calendar</a>
-				</li>
-				<li>
-					<a href="http://mypack.ncsu.edu" title="North Carolina State University Portal">MyPack Portal</a>
-				</li>
-				<li>
-					<a href="http://giving.ncsu.edu" title="Giving to North Carolina State University">Giving</a>
-				</li>
-				<li class="last">
-					<a href="http://www.ncsu.edu/campus_map/" title="North Carolina State University Campus Map">Campus Map</a>
-				</li>
-			</ul>';
-	}
 
 	// check for footer horizontal menu. If configured by user, display it. If not configured by user, display default menu.
 	if(!$vars['footer_menu']) {

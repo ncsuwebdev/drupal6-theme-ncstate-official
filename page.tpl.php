@@ -26,12 +26,38 @@
 			<!-- start header container region with site title, search box etc -->
 			<div id="region-header-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
 				<div id="head">
-		            <?php if(theme_get_setting('select_brand_bar') == 0): ?>
-				        <div id="region-noBrandBarDefaultTopMenu-container">
-				            <a class="access" name="university-navigation-links">University Navigation Links</a>
-				            <div id="region-noBrandBarDefaultTopMenu" role="navigation" aria-label="University Navigation Links"><?php print $page['noBrandBarDefaultTopMenu'];?></div>
-				        </div>
-				    <?php endif; ?>
+                                    <div id="region-noBrandBarDefaultTopMenu-container">
+                                        <a class="access" name="university-navigation-links">University Navigation Links</a>
+                                        <div id="region-noBrandBarDefaultTopMenu" role="navigation" aria-label="University Navigation Links">
+                                            <h2 class="brickHeaderLogo" title="North Carolina State University">
+                                                <a href="http://www.ncsu.edu" title="North Carolina State University">
+                                                    <img class="ncsu-text" alt="North Carolina State University" src="<?php echo base_path() . path_to_theme(); ?>/images/base/125-anniversary-stripbrick-redonwhite.gif"></a>
+                                            </h2>
+                                            <ul id="noBrandBarDefaultTopMenuNav">
+                                                    <li>
+                                                        <a href="http://www.ncsu.edu/directory/" title="Find People at North Carolina State University">Find People</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.lib.ncsu.edu/" title="North Carolina State University Libraries">Libraries</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://news.ncsu.edu/" title="Latest North Carolina State University News">News</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://calendar.activedatax.com/ncstate/" title="North Carolina State University Events Calendar">Calendar</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="http://mypack.ncsu.edu" title="North Carolina State University Portal">MyPack Portal</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="http://giving.ncsu.edu" title="Giving to North Carolina State University">Giving</a>
+                                                    </li>
+                                                    <li class="last">
+                                                            <a href="http://www.ncsu.edu/campus_map/" title="North Carolina State University Campus Map">Campus Map</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
     				<?php if(theme_get_setting('show_belltower')): ?>
 						<div id="region-header-left-belltower" class="grid_7">
 					        <a href="<?php echo base_path(); ?>" title="Return to the homepage of this website">

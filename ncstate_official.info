@@ -1,9 +1,9 @@
 ; Official Drupal 6 Theme developed by Nick Young (njyoung / usaussie)
 
-name = NC State University Theme (Drupal 6)
+name = NC State University Theme
 project = ncstate_official
 description = Official Theme for NC State University (Drupal 6 only)
-version = 6.x-2.0
+version = 6.x-2.1
 core = 6.x
 engine = phptemplate
 
@@ -50,5 +50,3 @@ regions[content]                    = Main Content
 regions[main_below_content]         = Below Main Content
 regions[right_main_sidebar]         = Right Main Sidebar
 regions[footer_menu]                = Footer Menu
-regions[footer_left_logo]           = Footer Left Logo
-regions[footer_right_text]          = Footer Right Text
