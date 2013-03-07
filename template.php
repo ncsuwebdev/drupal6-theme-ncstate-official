@@ -192,6 +192,11 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 		$vars['footer_menu'] = $vars['footer_menu'];
 	}
 
+  // dont show breadcrumbs on home page
+  if ($vars['is_front']) {
+    $vars['breadcrumb'] = NULL;
+  }
+
 
 }
 
