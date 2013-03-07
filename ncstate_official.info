@@ -3,7 +3,7 @@
 name = NC State University Theme
 project = ncstate_official
 description = Official Theme for NC State University (Drupal 6 only)
-version = 6.x-2.2
+version = 6.x-2.3
 core = 6.x
 engine = phptemplate
 
