@@ -675,7 +675,7 @@ body {
 }
 
 #region-right-sidebar-container .block-bottom {
-    
+
     height: 32px;
     margin:0px;
     padding: 0px;
@@ -690,20 +690,20 @@ body {
     margin: 0 0 5px 0 !important;
 }
 #region-right-sidebar-container .block .content {
-    font-size: 12px; 
+    font-size: 12px;
     color: #666666;
 }
 
 #right-main-sidebar-content .content p, #right-bottom-sidebar-content .content p {
     line-height: 1.4em;
-    
+
 }
 
 #right-main-sidebar-content h2, #right-bottom-sidebar-content h2 {
     background-color:#CC0000;
     background-image:url(../../images/base/sidebar_header_cut.png);
     background-position:100% 100%;
-    background-repeat:no-repeat no-repeat;
+    background-repeat:no-repeat;
     color:#FFFFFF;
     display:inline-block;
     font-size: 12px;
@@ -806,7 +806,7 @@ body {
 
 #right-top-sidebar-content .content p, #right-main-blank-sidebar-content .content p {
     line-height: 1.4em;
-    
+
 }
 
 #right-top-sidebar-content h2, #right-main-blank-sidebar-content h2 {
