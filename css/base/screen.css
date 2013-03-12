@@ -929,6 +929,7 @@ body {
 float:right;
 width:148px;
 padding-right:21px;
+list-style: none;
 }
 
 #region-footer-container ul.social li {
