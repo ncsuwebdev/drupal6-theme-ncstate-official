@@ -237,6 +237,6 @@ function ncstate_official_node_submitted($node) {
   return t('!datetime — !username',
     array(
       '!username' => theme('username', $node),
-      '!datetime' => format_date($node->created),
+      '!datetime' => 'Created: ' . format_date($node->created) . ', Last Updated: ' . format_date($node->changed),
     ));
 }
