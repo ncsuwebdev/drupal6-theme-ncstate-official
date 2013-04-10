@@ -291,6 +291,10 @@ body {
     margin: 2px 0 0 0;
     font-size: 12px;
 }
+#content-area h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
 #content-area h3 {
     font-size: 16px;
     font-weight: bold;
