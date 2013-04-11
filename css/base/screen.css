@@ -304,7 +304,13 @@ body {
     font-weight: bold;
 }
 #content-area h5 {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#content-area h6 {
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: underline;
 }
 
 .content-area-background-with-left-column {
@@ -313,6 +319,10 @@ body {
 
 .content-area-background-without-left-column {
     background-color: #FFF;
+}
+
+.node-unpublished {
+    background-color: #e0a3a1;
 }
 
 /*----------------------------------------------------------------------------------------------------------
