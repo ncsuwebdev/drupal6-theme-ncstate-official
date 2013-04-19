@@ -12,12 +12,31 @@
 	<!-- start accessibility links -->
         <div class="skipNav">
             <a href="#main-content-anchor" title="Skip to main content area">Skip to the main content area</a>
+            <?php if(theme_get_setting('select_brand_bar') != 0): ?>
+                <a href="#brand-bar" title="Skip to Unviersity Navigation Links">Skip to the University Navigation Links</a>
+            <?php else: ?>
+                <a href="#university-navigation-links" title="Skip to Unviersity Navigation Links">Skip to the University Navigation Links</a>
+            <?php endif; ?>
+            <?php if($header_search): ?>
+                <a href="#site-search" title="Skip to Site Search">Skip to Search this Site</a>
+            <?php endif; ?>
+            <?php if($horizontal_main_menu): ?>
+                <a href="#horizontal-main-menu" title="Skip to Main Site Navigation">Skip to Main Site Navigation</a>
+            <?php endif; ?>
+            <?php if($page['region-widths']['show-left-region']): ?>
+                <a href="#left-sidebar" title="Skip to Primary Sidebar Navigation">Skip to Primary sidebar navigation</a>
+            <?php endif; ?>
+            <?php if($page['region-widths']['show-right-region']): ?>
+                <a href="#right-sidebar" title="Skip to Secondary Sidebar Navigation">Skip to Secondary sidebar navigation</a>
+            <?php endif; ?>
+            <a href="#footer" title="Skip to footer navigation and content">Skip to footer navigation and content</a>
         </div>
 	<!-- end accessibility links -->
 	<!-- show either the default red menu at the top of the header region, or the brand bar  -->
 	<?php if(theme_get_setting('select_brand_bar') != 0): ?>
         <div id="region-brandbar-container">
-            <a class="access" name="brand-bar">NC State Brand Bar</a>
+            <div class="access" id="brand-bar">NC State University Navigation Links</div>
+            <!--<a class="access" name="brand-bar">NC State Brand Bar</a>-->
             <div id="region-brandbar" role="navigation" aria-label="NC State Brand Bar"><?php print $page['brand-bar-code'];?></div>
         </div>
         <!-- End brandbar region -->
@@ -27,7 +46,8 @@
 			<div id="region-header-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
 				<div id="head">
                                     <div id="region-noBrandBarDefaultTopMenu-container">
-                                        <a class="access" name="university-navigation-links">University Navigation Links</a>
+                                        <div class="access" id="university-navigation-links">University Navigation Links</div>
+                                        <!-- <a class="access" name="university-navigation-links">University Navigation Links</a> -->
                                         <div id="region-noBrandBarDefaultTopMenu" role="navigation" aria-label="University Navigation Links">
                                             <h2 class="brickHeaderLogo" title="North Carolina State University">
                                                 <a href="http://www.ncsu.edu" title="North Carolina State University">
@@ -73,7 +93,8 @@
 				    <?php if ($page['region-widths']['show-right-header-region']): ?>
                                         <div id="region-header-right" class="grid_28">
                                                     <?php if($header_search): ?>
-                                                            <a class="access" name="site-search">Search this site</a>    	
+                                                            <div class="access" id="site-search">Search this site</div>
+                                                            <!--<a class="access" name="site-search">Search this site</a>-->    	
                                                             <div role="search" aria-label="Search this website" id="header-site-search">
                                                                     <?php print $header_search; ?>
                                                             </div>
@@ -90,8 +111,9 @@
                                     <div id="horizontal-menu-grid" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>">
 					<?php if($horizontal_main_menu): ?>
 						<div id="horizontal-main-menu">
-							<a class="access" name="horizontal-main-menu">Horizontal Main Menu</a>
-							<?php print $horizontal_main_menu; ?>
+                                                    <div class="access" id="horizontal-main-menu">Horizontal Main Menu</div>
+                                                    <!--<a class="access" name="horizontal-main-menu">Horizontal Main Menu</a>-->
+                                                    <?php print $horizontal_main_menu; ?>
 						</div>
 					<?php endif; ?>
                                         </div>
@@ -103,7 +125,8 @@
 				<div id="content-area" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?> <?php if($page['region-widths']['show-left-region']): echo 'content-area-background-with-left-column'; else: echo 'content-area-background-without-left-column'; endif;?>">
 					<!-- begin grid for left side of the layout -->
 					<?php if($page['region-widths']['show-left-region']): ?>
-						<a class="access" name="left-sidebar" role="navigation" aria-label="Left Side Bar (Primary Navigation Area)">Left Side Bar (Primary Navigation Area)</a>    	
+						<div class="access" id="left-sidebar">Primary Sidebar Navigation</div>
+                                                <!--<a class="access" name="left-sidebar" role="navigation" aria-label="Left Side Bar (Primary Navigation Area)">Left Side Bar (Primary Navigation Area)</a>-->
 						<div class="grid_<?php echo $page['region-widths']['left-region-width']; ?>">
 							<div id="region-left-menu-area-container" class="container_<?php echo $page['region-widths']['left-region-width']; ?>">
 								<div id="region-left-menu" class="grid_<?php echo $page['region-widths']['left-region-width']; ?>">
@@ -155,7 +178,8 @@
 									</div>
 								</div>
 							<?php endif; ?>
-                            <a class="access" name="main-content-anchor"></a>
+                                                    <div class="access" id="main-content-anchor"></div>
+                                                    <!--<a class="access" name="main-content-anchor"></a>-->
 							<?php if($main_image): ?>
 								<div id="region-main-image" class="grid_<?php echo $page['region-widths']['center-right-region-width']; ?>">
 									<div class="alpha omega">
@@ -191,7 +215,8 @@
                             </div>
                     </div>
                     <?php if($page['region-widths']['show-right-region']): ?>
-                            <a class="access" name="right-sidebar">Right Side Bar</a>    
+                            <div class="access" id="right-sidebar">Secondary Side Bar Content</a>    
+                            <!--<a class="access" name="right-sidebar">Right Side Bar</a>-->
                             <div id="region-right-sidebar-container" class="container_<?php echo $page['region-widths']['right-region-width']; ?>">
                                     <div id="region-right-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
                                         <?php if($right_top_sidebar): ?>
@@ -234,7 +259,8 @@
             <!-- Start footer area (everything underneath the main content area) -->
             <div id="region-footer-container" class="container_<?php echo $page['region-widths']['maxPageWidth']; ?>">
                     <div id="footer-separator" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>"></div>
-                    <a class="access" name="footer">Footer</a>    
+                    <div class="access" id="footer">Footer Navigation and Content</div>    
+                    <!--<a class="access" name="footer">Footer</a>-->  
                     <div id="footer-horizontal-menu" class="grid_<?php echo $page['region-widths']['maxPageWidth']; ?>" role="contentinfo" aria-label="Footer">
                             <?php print $footer_menu; ?>
                     </div>
