@@ -234,7 +234,7 @@ function ncstate_official_comment_submitted($comment) {
  * Returns the themed submitted-by string for the node.
  */
 function ncstate_official_node_submitted($node) {
-  return t('!datetime — !username',
+  return t('!datetime',
     array(
       '!username' => theme('username', $node),
       '!datetime' => 'Created: ' . format_date($node->created) . ', Last Updated: ' . format_date($node->changed),
