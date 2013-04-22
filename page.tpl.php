@@ -215,8 +215,7 @@
                             </div>
                     </div>
                     <?php if($page['region-widths']['show-right-region']): ?>
-                            <div class="access" id="right-sidebar-access">Secondary Side Bar Content</a>    
-                            <!--<a class="access" name="right-sidebar">Right Side Bar</a>-->
+                            <div class="access" id="right-sidebar-access">Secondary Side Bar Content</div>    
                             <div id="region-right-sidebar-container" class="container_<?php echo $page['region-widths']['right-region-width']; ?>">
                                     <div id="region-right-sidebar" class="grid_<?php echo $page['region-widths']['right-region-width']; ?>">
                                         <?php if($right_top_sidebar): ?>
