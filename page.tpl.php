@@ -1,6 +1,5 @@
-<?php // $Id: page.tpl.php,v 1.18.2.1 2011/02/07 00:13:31 njyoung Exp $ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
+<!DOCTYPE html>
+<html lang="en-US">
 	<head>
 		<?php print $head; ?>
 		<title><?php print $head_title; ?></title>
@@ -51,7 +50,7 @@
                                         <div id="region-noBrandBarDefaultTopMenu" role="navigation" aria-label="University Navigation Links">
                                             <h2 class="brickHeaderLogo" title="North Carolina State University">
                                                 <a href="http://www.ncsu.edu" title="North Carolina State University">
-                                                    <img class="ncsu-text" alt="North Carolina State University" src="<?php echo base_path() . path_to_theme(); ?>/images/base/125-anniversary-stripbrick-redonwhite.gif"></a>
+                                                    <img class="ncsu-text" alt="North Carolina State University" src="<?php echo base_path() . path_to_theme(); ?>/images/base/125-anniversary-stripbrick-redonwhite.gif" /></a>
                                             </h2>
                                             <ul id="noBrandBarDefaultTopMenuNav">
                                                     <li>
@@ -275,7 +274,7 @@
                         </ul>
                     </div>
             </div>
-        </div>
+        
         <?php print $closure ?>
     </body>
 </html>
