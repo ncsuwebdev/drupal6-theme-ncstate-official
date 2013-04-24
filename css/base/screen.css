@@ -1085,31 +1085,3 @@ div.meta {
     margin-bottom: 10px;
     border: 1px solid #000;
 }
-
-
-
-/*----------------------------------------------------------------------------------------------------------
-    ACCESSIBLE TARGET="_BLANK" STYLING (WORKS IN CONJUNCTION WITH JAVASCRIPT CODE)
-----------------------------------------------------------------------------------------------------------*/
-
-
-.linkTargetBlankParent .linkTargetBlank {
-    left: -999px;
-    overflow: hidden;
-    position: absolute;
-    top: auto;
-}
-.linkTargetBlankParent:hover .linkTargetBlank, .linkTargetBlankParent:active .linkTargetBlank, .linkTargetBlankParent:focus .linkTargetBlank {
-    display: inline;
-    position: absolute;
-    left: inherit;
-    top: inherit;
-    padding: 2px;
-    margin-left: 5px;
-    background-color: #FFFFFF;
-    color: #000000;
-    border: 1px solid #000;
-}
-
-
-
