@@ -171,7 +171,7 @@
 						<div id="region-center-right-container" class="container_<?php echo $page['region-widths']['center-right-region-width']; ?>">
 							<?php if ($breadcrumb && theme_get_setting('show_breadcrumbs')): ?>
 								<div id="region-breadcrumbs" class="grid_<?php echo $page['region-widths']['center-right-region-width']; ?>">
-									<div class="access" name="breadcrumb-access">Breadcrumbs</div>    	
+									<div class="access" id="breadcrumb-access">Breadcrumbs</div>    	
 									<div id="breadcrumb" class="alpha omega" role="navigation" aria-label="Breadcrumb Links List">
 										<?php print $breadcrumb; ?>
 									</div>
