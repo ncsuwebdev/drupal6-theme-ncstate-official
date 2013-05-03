@@ -177,7 +177,8 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
 	// check for footer horizontal menu. If configured by user, display it. If not configured by user, display default menu.
 	if(!$vars['footer_menu']) {
 		$vars['footer_menu'] = '
-			<ul aria-label="Services Navigation" role="navigation">
+			<div aria-label="Services Navigation" role="navigation">
+                        <ul>
                             <li><a href="http://www.ncsu.edu/emergency-information/">Emergency Info</a></li>
                             <li><a href="http://www.ncsu.edu/privacy/" title="North Carolina State University Privacy Policy">Privacy</a></li>
                             <li><a href="http://www.ncsu.edu/copyright/" title="North Carolina State University copyright policy">Copyright</a></li>
@@ -187,7 +188,7 @@ function ncstate_official_preprocess_page(&$vars, $hook) {
                             <li><a href="http://www.ncsu.edu/about-site/" title="About the North Carolina State University website">About the Site</a></li>
                             <li><a class="track" href="https://jobs.ncsu.edu/" title="Jobs at North Carolina State University">Jobs</a></li>
                             <li><a href="http://www.ncsu.edu/contact-us/" title="Contact North Carolina State University">Contact NC State</a></li>
-                        </ul>';
+                        </ul></div>';
 	} else {
 		$vars['footer_menu'] = $vars['footer_menu'];
 	}
