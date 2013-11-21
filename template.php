@@ -7,6 +7,7 @@
 
 	$themePath = "var theme_path = '". path_to_theme() . "';";
 	drupal_add_js($themePath, 'inline');
+  drupal_add_js('misc/collapse.js','core');
 
   drupal_add_js(array('ncstate_official' => array(
       'slider_transition_time' => theme_get_setting('slider_transition_time'),
